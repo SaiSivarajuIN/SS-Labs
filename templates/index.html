@@ -15,6 +15,7 @@
             <li><a href="#overview">Overview</a></li>
             <li><a href="#exaone">EXAONE-4.0-1.2B-GGUF</a></li>
             <li><a href="#mistral">Mistral-7B-v0.3-GGUF</a></li>
+            <li><a href="#phi">Phi-3.5-mini-instruct-GUF</a></li>
             <li><a href="#performance">Performance Overview</a></li>
             <li><a href="#about">About SS Labs</a></li>
             <li><a href="#references">References</a></li>
@@ -28,13 +29,14 @@
 
     <!--- Main Content -->
     <p>Welcome to <b>SS Labs</b>, a research and deployment group focused on efficient LLM conversions, fine-tuning, and GGUF model optimization for edge and cloud inference.</p>
-    <blockquote><a href="https://huggingface.co/ss-lab" target="_blank">🔗 View on Hugging Face → ss-lab</a></blockquote>
+    <blockquote><a href="https://huggingface.co/ss-lab" target="_blank">🔗 View on Hugging Face</a></blockquote>
 
     <!-- Model Overview -->
     <h2 id="overview">Overview</h2>
     <ul>
         <li><b>EXAONE-4.0-1.2B-GGUF</b> — a lightweight, multilingual conversational model.</li>
         <li><b>Mistral-7B-v0.3-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
+        <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
     </ul>
     
     <!-- Compatibility Note -->
@@ -43,7 +45,7 @@
     <!-- Model Details -->
     <!-- EXAONE-4.0-1.2B-GGUF Section -->
     <h2 id="exaone">EXAONE-4.0-1.2B-GGUF</h2>
-    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/EXAONE-4.0-1.2B-GGUF" target="_blank">ss-lab/EXAONE-4.0-1.2B-GGUF</a></p>
+    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/EXAONE-4.0-1.2B-GGUF" target="_blank">hf.co/ss-lab/EXAONE-4.0-1.2B-GGUF</a></p>
 
     <h3>Details</h3>
     <table>
@@ -61,7 +63,7 @@ EXAONE-4.0-1.2B.Q8_0.gguf</pre>
 
     <!-- Mistral-7B-v0.3-GGUF Section -->
     <h2 id="mistral">Mistral-7B-v0.3-GGUF</h2>
-    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Mistral-7b-v0.3-GGUF" target="_blank">ss-lab/Mistral-7b-v0.3-GGUF</a></p>
+    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Mistral-7b-v0.3-GGUF" target="_blank">hf.co/ss-lab/Mistral-7b-v0.3-GGUF</a></p>
 
     <h3>Details</h3>
     <table>
@@ -76,12 +78,28 @@ EXAONE-4.0-1.2B.Q8_0.gguf</pre>
     <pre>mistral-7b-v0.3.Q3_K_M.gguf
 mistral-7b-v0.3.Q4_K_M.gguf</pre>
 
+    <!-- Phi-3.5-mini-instruct.GGUF Section -->
+    <h2 id="phi">Phi-3.5-mini-instruct-GGUF</h2>
+    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Phi-3.5-mini-instruct-GGUF" target="_blank">hf.co/ss-lab/Phi-3.5-mini-instruct-GGUF</a></p>
+
+    <h3>Details</h3>
+    <table>
+        <tr><th>Property</th><th>Value</th></tr>
+        <tr><td>Model Size</td><td>3.8B parameters</td></tr>
+        <tr><td>Architecture</td><td>Phi-3.5 Mini Instruct</td></tr>
+        <tr><td>Quantization</td><td>Q4_K_M (2.2 GB)</td></tr>
+        <tr><td>License</td><td>MIT</td></tr>
+    </table>
+
+    <h3>📁 Available Model Files</h3>
+    <pre>phi-3.5-mini-instruct.Q4_K_M.gguf</pre>
 
     <!-- Performance Overview -->
     <h2 id="performance">📈 Performance Overview</h2>
     <table>
         <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
         <tr><td>EXAONE 4.0</td><td>1.2B</td><td>GGUF</td><td>Q4 / Q8</td><td>812 MB – 1.36 GB</td></tr>
+        <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
         <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
     </table>
 
