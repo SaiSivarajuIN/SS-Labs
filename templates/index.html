@@ -4,129 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SS Labs — Hugging Face Models Documentation</title>
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="icon" href="static/logo.png" type="image/png">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" href="../static/logo.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 60px; /* Space for the fixed header */
+        }
+        .menu-toggle {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        .page-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        .page-header h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .roadmap {
+            position: fixed;
+            top: 60px; /* Position below the header */
+            left: 0;
+            height: calc(100vh - 60px); /* Full height minus header */
+            width: 240px; /* Sidebar width */
+            background-color: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            padding: 20px;
+            overflow-y: auto;
+            box-sizing: border-box;
+            z-index: 900;
+            transition: transform 0.3s ease-in-out;
+        }
+        .roadmap ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .roadmap li a {
+            display: block;
+            padding: 4px 0;
+            color: #222; /* Match body text color */
+        }
+        .roadmap li a:hover {
+            text-decoration: none; /* Remove underline on hover */
+            color: #232527; /* Optional: Add a color change for hover feedback */
+        }
+        .main-content {
+            margin-left: 240px; /* Same as sidebar width */
+            max-width: 900px; /* Set a max-width for readability */
+            padding: 20px 40px; /* Add some horizontal padding */
+            margin: 0 auto 0 240px; /* Center the content relative to the remaining space */
+            transition: margin-left 0.3s ease-in-out;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; /* Show hamburger menu */
+            }
+            .page-header h1 {
+                font-size: 1.2em;
+            }
+            .roadmap {
+                transform: translateX(-100%); /* Hide sidebar off-screen */
+                z-index: 1100; /* Ensure it's above main content but below header */
+            }
+            .roadmap.open {
+                transform: translateX(0); /* Show sidebar */
+            }
+            .main-content {
+                margin-left: 0; /* Content takes full width */
+                width: 100%;
+                max-width: none; /* Remove max-width on mobile */
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            /* Remove logo from sidebar on mobile to avoid duplication */
+            .roadmap .logo {
+                display: none;
+            }
+            .content-wrapper {
+                padding: 0; /* Remove padding on mobile as main-content has it */
+            }
+        }
+    </style>
 </head>
 <body>
+    <header class="page-header">
+        <div class="menu-toggle" id="menu-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <img src="../static/logo.png" alt="SS Labs Logo" class="logo">
+        <h1>SS Labs — Hugging Face Models Documentation</h1>
+    </header>
+
     <!-- Roadmap Navigation -->
-    <nav class="roadmap">
+    <nav class="roadmap" id="roadmap">
         <h3>Roadmap</h3>
         <ul>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#exaone">EXAONE-4.0-1.2B-GGUF</a></li>
-            <li><a href="#mistral">Mistral-7B-v0.3-GGUF</a></li>
-            <li><a href="#phi">Phi-3.5-mini-instruct-GUF</a></li>
+            <li><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></li>
             <li><a href="#performance">Performance Overview</a></li>
             <li><a href="#about">About SS Labs</a></li>
             <li><a href="#references">References</a></li>
         </ul>
     </nav>
     
-    <div class="header">
-        <img src="static/logo.png" alt="SS Labs Logo" class="logo">
-        <h1>SS Labs — Hugging Face Models Documentation</h1>
-    </div>
+    <div class="main-content">
+        <div class="content-wrapper">
+            <!--- Main Content -->
+            <div class="spacer">
+                <p>Welcome to <b>SS Labs</b>, a research and deployment group focused on efficient LLM conversions, 
+                    fine-tuning, and GGUF model optimization for edge and cloud inference.
+                </p>
+                <blockquote><a href="https://huggingface.co/ss-lab" target="_blank">View on Hugging Face</a></blockquote>
+            </div>
 
-    <!--- Main Content -->
-    <div class="spacer">
-        <p>Welcome to <b>SS Labs</b>, a research and deployment group focused on efficient LLM conversions, 
-            fine-tuning, and GGUF model optimization for edge and cloud inference.
-        </p>
-        <blockquote><a href="https://huggingface.co/ss-lab" target="_blank">View on Hugging Face</a></blockquote>
-    </div>
+            <!-- Model Overview -->
+            <h2 id="overview">Overview</h2>
+            <ul>
+                <li><b>EXAONE-4.0-1.2B-GGUF</b> — a lightweight, multilingual conversational model.</li>
+                <li><b>Mistral-7B-v0.3-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
+                <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
+            </ul>
+            
+            <!-- Compatibility Note -->
+            <p>All models are compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
 
-    <!-- Model Overview -->
-    <h2 id="overview">Overview</h2>
-    <ul>
-        <li><b>EXAONE-4.0-1.2B-GGUF</b> — a lightweight, multilingual conversational model.</li>
-        <li><b>Mistral-7B-v0.3-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
-        <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
-    </ul>
-    
-    <!-- Compatibility Note -->
-    <p>All models are compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
+            <!-- Model Details -->
+            <!-- EXAONE-4.0-1.2B-GGUF Section -->
+            <h2 id="exaone">EXAONE-4.0-1.2B-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/EXAONE-4.0-1.2B-GGUF" target="_blank">hf.co/ss-lab/EXAONE-4.0-1.2B-GGUF</a></p>
 
-    <!-- Model Details -->
-    <!-- EXAONE-4.0-1.2B-GGUF Section -->
-    <h2 id="exaone">EXAONE-4.0-1.2B-GGUF</h2>
-    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/EXAONE-4.0-1.2B-GGUF" target="_blank">hf.co/ss-lab/EXAONE-4.0-1.2B-GGUF</a></p>
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>1.2B parameters</td></tr>
+                <tr><td>Architecture</td><td>EXAONE 4.0</td></tr>
+                <tr><td>Quantization</td><td>Q4_K_M (812 MB) / Q8_0 (1.36 GB)</td></tr>
+                <tr><td>Languages</td><td>English, Korean</td></tr>
+                <tr><td>License</td><td>Apache 2.0</td></tr>
+            </table>
 
-    <h3>Details</h3>
-    <table>
-        <tr><th>Property</th><th>Value</th></tr>
-        <tr><td>Model Size</td><td>1.2B parameters</td></tr>
-        <tr><td>Architecture</td><td>EXAONE 4.0</td></tr>
-        <tr><td>Quantization</td><td>Q4_K_M (812 MB) / Q8_0 (1.36 GB)</td></tr>
-        <tr><td>Languages</td><td>English, Korean</td></tr>
-        <tr><td>License</td><td>Apache 2.0</td></tr>
-    </table>
-
-    <h3>📁 Available Model Files</h3>
-    <pre>EXAONE-4.0-1.2B.Q4_K_M.gguf
+            <h3>📁 Available Model Files</h3>
+            <pre>EXAONE-4.0-1.2B.Q4_K_M.gguf
 EXAONE-4.0-1.2B.Q8_0.gguf</pre>
 
-    <!-- Mistral-7B-v0.3-GGUF Section -->
-    <h2 id="mistral">Mistral-7B-v0.3-GGUF</h2>
-    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Mistral-7b-v0.3-GGUF" target="_blank">hf.co/ss-lab/Mistral-7b-v0.3-GGUF</a></p>
+            <!-- Mistral-7B-v0.3-GGUF Section -->
+            <h2 id="mistral">Mistral-7B-v0.3-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Mistral-7b-v0.3-GGUF" target="_blank">hf.co/ss-lab/Mistral-7b-v0.3-GGUF</a></p>
 
-    <h3>Details</h3>
-    <table>
-        <tr><th>Property</th><th>Value</th></tr>
-        <tr><td>Model Size</td><td>7B parameters</td></tr>
-        <tr><td>Architecture</td><td>Mistral 7B v0.3</td></tr>
-        <tr><td>Quantization</td><td>Q3_K_M (3.52 GB) / Q4_K_M (4.37 GB)</td></tr>
-        <tr><td>License</td><td>Apache 2.0</td></tr>
-    </table>
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>7B parameters</td></tr>
+                <tr><td>Architecture</td><td>Mistral 7B v0.3</td></tr>
+                <tr><td>Quantization</td><td>Q3_K_M (3.52 GB) / Q4_K_M (4.37 GB)</td></tr>
+                <tr><td>License</td><td>Apache 2.0</td></tr>
+            </table>
 
-    <h3>📁 Available Model Files</h3>
-    <pre>mistral-7b-v0.3.Q3_K_M.gguf
+            <h3>📁 Available Model Files</h3>
+            <pre>mistral-7b-v0.3.Q3_K_M.gguf
 mistral-7b-v0.3.Q4_K_M.gguf</pre>
 
-    <!-- Phi-3.5-mini-instruct.GGUF Section -->
-    <h2 id="phi">Phi-3.5-mini-instruct-GGUF</h2>
-    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Phi-3.5-mini-instruct-GGUF" target="_blank">hf.co/ss-lab/Phi-3.5-mini-instruct-GGUF</a></p>
+            <!-- Phi-3.5-mini-instruct.GGUF Section -->
+            <h2 id="phi">Phi-3.5-mini-instruct-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Phi-3.5-mini-instruct-GGUF" target="_blank">hf.co/ss-lab/Phi-3.5-mini-instruct-GGUF</a></p>
 
-    <h3>Details</h3>
-    <table>
-        <tr><th>Property</th><th>Value</th></tr>
-        <tr><td>Model Size</td><td>3.8B parameters</td></tr>
-        <tr><td>Architecture</td><td>Phi-3.5 Mini Instruct</td></tr>
-        <tr><td>Quantization</td><td>Q4_K_M (2.2 GB)</td></tr>
-        <tr><td>License</td><td>MIT</td></tr>
-    </table>
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>3.8B parameters</td></tr>
+                <tr><td>Architecture</td><td>Phi-3.5 Mini Instruct</td></tr>
+                <tr><td>Quantization</td><td>Q4_K_M (2.2 GB)</td></tr>
+                <tr><td>License</td><td>MIT</td></tr>
+            </table>
 
-    <h3>📁 Available Model Files</h3>
-    <pre>phi-3.5-mini-instruct.Q4_K_M.gguf</pre>
+            <h3>📁 Available Model Files</h3>
+            <pre>phi-3.5-mini-instruct.Q4_K_M.gguf</pre>
 
-    <!-- Performance Overview -->
-    <h2 id="performance">Performance Overview</h2>
-    <table>
-        <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
-        <tr><td>EXAONE 4.0</td><td>1.2B</td><td>GGUF</td><td>Q4 / Q8</td><td>812 MB – 1.36 GB</td></tr>
-        <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
-        <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
-    </table>
+            <!-- Performance Overview -->
+            <h2 id="performance">Performance Overview</h2>
+            <table>
+                <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
+                <tr><td>EXAONE 4.0</td><td>1.2B</td><td>GGUF</td><td>Q4 / Q8</td><td>812 MB – 1.36 GB</td></tr>
+                <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
+                <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
+            </table>
 
-    <!-- About Section -->
-    <div class="spacer">
-        <h2 id="about">About SS Labs</h2>
+            <!-- About Section -->
+            <div class="spacer">
+                <h2 id="about">About SS Labs</h2>
 
-        <p><b>SS Labs</b> focuses on converting open LLMs to efficient GGUF formats, 
-            fine-tuning for local inference, and building multilingual text generation models.
-        </p>
-        <blockquote>“Efficiency meets accessibility — one model at a time.”</blockquote>
+                <p><b>SS Labs</b> focuses on converting open LLMs to efficient GGUF formats, 
+                    fine-tuning for local inference, and building multilingual text generation models.
+                </p>
+                <blockquote>“Efficiency meets accessibility — one model at a time.”</blockquote>
+            </div>
+
+            <!-- References Section -->
+            <h2 id="references">References</h2>
+            <ul>
+                <li><a href="https://huggingface.co/ss-lab" target="_blank">SS Labs on Hugging Face</a></li>
+                <li><a href="https://docs.unsloth.ai/" target="_blank">Unsloth Doc</a></li>
+            </ul>
+
+            <!-- Footer -->
+            <footer>
+                <p>© 2024 SS Labs. All rights reserved.</p>
+            </footer>
+        </div>
     </div>
 
-    <!-- References Section -->
-    <h2 id="references">References</h2>
-    <ul>
-        <li><a href="https://huggingface.co/ss-lab" target="_blank">SS Labs on Hugging Face</a></li>
-        <li><a href="https://docs.unsloth.ai/" target="_blank">Unsloth Doc</a></li>
-    </ul>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const roadmap = document.getElementById('roadmap');
+            const roadmapLinks = roadmap.querySelectorAll('a');
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 SS Labs. All rights reserved.</p>
-    </footer>
+            menuToggle.addEventListener('click', function () {
+                roadmap.classList.toggle('open');
+            });
+
+            // Close sidebar when a link is clicked
+            roadmapLinks.forEach(link => link.addEventListener('click', () => roadmap.classList.remove('open')));
+        });
+    </script>
 </body>
 </html>

@@ -1,11 +1,9 @@
 body {
     font-family: "Segoe UI", Roboto, sans-serif;
-    background-color: #f8f9fa;
     color: #222;
-    margin: 40px;
-    max-width: 900px;
     line-height: 1.6;
-    padding-right: 250px; /* Space for the roadmap */
+    /* General body styles like margin are now handled by inline styles in index.html */
+    background-color: #ffffff; /* Match the page-header background for consistency */
 }
 h1, h2, h3 {
     color: #111;
@@ -60,46 +58,6 @@ th {
 .logo {
     width: 50px;
     height: 50px;
-}
-
-.roadmap {
-    position: fixed;
-    top: 100px;
-    right: 40px; /* Adjusted from 20px to align with body margin */
-    width: 200px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-.roadmap h3 {
-    margin-top: 0;
-    color: #111;
-}
-.roadmap ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.roadmap li a {
-    display: block;
-    padding: 5px 0;
-    color: #007bff;
-    text-decoration: none;
-}
-.roadmap li a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    body {
-        padding-right: 0;
-        margin: 20px;
-    }
-    .roadmap {
-        display: none;
-    }
 }
 
 /* Footer styles */
