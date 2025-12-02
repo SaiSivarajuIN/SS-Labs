@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Labs — Hugging Face Models Documentation</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" href="../static/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Roadmap Navigation -->
+    <nav class="roadmap">
+        <h3>Roadmap</h3>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#exaone">EXAONE-4.0-1.2B-GGUF</a></li>
+            <li><a href="#mistral">Mistral-7B-v0.3-GGUF</a></li>
+            <li><a href="#performance">Performance Overview</a></li>
+            <li><a href="#about">About SS Labs</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </nav>
+    
+    <div class="header">
+        <img src="../static/logo.png" alt="SS Labs Logo" class="logo">
+        <h1>SS Labs — Hugging Face Models Documentation</h1>
+    </div>
+
+    <!--- Main Content -->
+    <p>Welcome to <b>SS Labs</b>, a research and deployment group focused on efficient LLM conversions, fine-tuning, and GGUF model optimization for edge and cloud inference.</p>
+    <blockquote><a href="https://huggingface.co/ss-lab" target="_blank">🔗 View on Hugging Face → ss-lab</a></blockquote>
+
+    <!-- Model Overview -->
+    <h2 id="overview">Overview</h2>
+    <ul>
+        <li><b>EXAONE-4.0-1.2B-GGUF</b> — a lightweight, multilingual conversational model.</li>
+        <li><b>Mistral-7B-v0.3-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
+    </ul>
+    
+    <!-- Compatibility Note -->
+    <p>All models are compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
+
+    <!-- Model Details -->
+    <!-- EXAONE-4.0-1.2B-GGUF Section -->
+    <h2 id="exaone">EXAONE-4.0-1.2B-GGUF</h2>
+    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/EXAONE-4.0-1.2B-GGUF" target="_blank">ss-lab/EXAONE-4.0-1.2B-GGUF</a></p>
+
+    <h3>Details</h3>
+    <table>
+        <tr><th>Property</th><th>Value</th></tr>
+        <tr><td>Model Size</td><td>1.2B parameters</td></tr>
+        <tr><td>Architecture</td><td>EXAONE 4.0</td></tr>
+        <tr><td>Quantization</td><td>Q4_K_M (812 MB) / Q8_0 (1.36 GB)</td></tr>
+        <tr><td>Languages</td><td>English, Korean</td></tr>
+        <tr><td>License</td><td>Apache 2.0</td></tr>
+    </table>
+
+    <h3>📁 Available Model Files</h3>
+    <pre>EXAONE-4.0-1.2B.Q4_K_M.gguf
+EXAONE-4.0-1.2B.Q8_0.gguf</pre>
+
+    <!-- Mistral-7B-v0.3-GGUF Section -->
+    <h2 id="mistral">Mistral-7B-v0.3-GGUF</h2>
+    <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Mistral-7b-v0.3-GGUF" target="_blank">ss-lab/Mistral-7b-v0.3-GGUF</a></p>
+
+    <h3>Details</h3>
+    <table>
+        <tr><th>Property</th><th>Value</th></tr>
+        <tr><td>Model Size</td><td>7B parameters</td></tr>
+        <tr><td>Architecture</td><td>Mistral 7B v0.3</td></tr>
+        <tr><td>Quantization</td><td>Q3_K_M (3.52 GB) / Q4_K_M (4.37 GB)</td></tr>
+        <tr><td>License</td><td>Apache 2.0</td></tr>
+    </table>
+
+    <h3>📁 Available Model Files</h3>
+    <pre>mistral-7b-v0.3.Q3_K_M.gguf
+mistral-7b-v0.3.Q4_K_M.gguf</pre>
+
+
+    <!-- Performance Overview -->
+    <h2 id="performance">📈 Performance Overview</h2>
+    <table>
+        <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
+        <tr><td>EXAONE 4.0</td><td>1.2B</td><td>GGUF</td><td>Q4 / Q8</td><td>812 MB – 1.36 GB</td></tr>
+        <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
+    </table>
+
+    <!-- About Section -->
+    
+    <div class="header">
+        <img src="../static/logo.png" alt="SS Labs Logo" class="logo">
+        <h2 id="about">About SS Labs</h2>
+    </div>
+
+    <p><b>SS Labs</b> focuses on converting open LLMs to efficient GGUF formats, fine-tuning for local inference, and building multilingual text generation models.</p>
+
+    <blockquote>“Efficiency meets accessibility — one model at a time.”</blockquote>
+    
+    <!-- References Section -->
+    <h2 id="references">🔗 References</h2>
+    <ul>
+        <li><a href="https://huggingface.co/ss-lab" target="_blank">SS Labs on Hugging Face</a></li>
+        <li><a href="https://docs.unsloth.ai/" target="_blank">Unsloth Doc</a></li>
+    </ul>
+</body>
+</html>
