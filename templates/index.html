@@ -62,6 +62,13 @@
             text-decoration: none; /* Remove underline on hover */
             color: #232527; /* Optional: Add a color change for hover feedback */
         }
+        .main-content a {
+            color: inherit; /* Use the parent text color */
+            text-decoration: underline; /* Keep links underlined for accessibility */
+        }
+        .main-content a:hover {
+            text-decoration: none; /* Remove underline on hover for a clean look */
+        }
         .main-content {
             margin-left: 240px; /* Same as sidebar width */
             max-width: 900px; /* Set a max-width for readability */
@@ -100,6 +107,14 @@
                 padding: 0; /* Remove padding on mobile as main-content has it */
             }
         }
+
+        /* Add scroll margin to anchor targets to account for the fixed header */
+        h2[id] {
+            scroll-margin-top: 80px; /* Adjust this value to match your header's height + some padding */
+        }
+        .spacer {
+            scroll-margin-top: 80px;
+        }
     </style>
 </head>
 <body>
@@ -119,8 +134,11 @@
         <ul>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#exaone">EXAONE-4.0-1.2B-GGUF</a></li>
+            <li><a href="#mistral">Mistral-7B-v0.3-GGUF</a></li>
             <li><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></li>
-            <li><a href="#performance">Performance Overview</a></li>
+            <li><a href="#gemma">Gemma-7B-GGUF</a></li>
+            <li><a href="#performance">Model Comparison</a></li>
+            <li><a href="#finetuning">Fine-tuning</a></li>
             <li><a href="#about">About SS Labs</a></li>
             <li><a href="#references">References</a></li>
         </ul>
@@ -129,7 +147,7 @@
     <div class="main-content">
         <div class="content-wrapper">
             <!--- Main Content -->
-            <div class="spacer">
+            <div class="spacer" id="overview">
                 <p>Welcome to <b>SS Labs</b>, a research and deployment group focused on efficient LLM conversions, 
                     fine-tuning, and GGUF model optimization for edge and cloud inference.
                 </p>
@@ -137,11 +155,12 @@
             </div>
 
             <!-- Model Overview -->
-            <h2 id="overview">Overview</h2>
+            <h2>Overview</h2>
             <ul>
                 <li><b>EXAONE-4.0-1.2B-GGUF</b> — a lightweight, multilingual conversational model.</li>
                 <li><b>Mistral-7B-v0.3-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
                 <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
+                <li><b>Gemma-7B-GGUF</b> — a lightweight, high-performance model from Google.</li>
             </ul>
             
             <!-- Compatibility Note -->
@@ -199,14 +218,42 @@ mistral-7b-v0.3.Q4_K_M.gguf</pre>
             <h3>📁 Available Model Files</h3>
             <pre>phi-3.5-mini-instruct.Q4_K_M.gguf</pre>
 
+            <!-- Gemma-7B-GGUF Section -->
+            <h2 id="gemma">Gemma-7B-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Gemma-7B-GGUF" target="_blank">hf.co/ss-lab/Gemma-7B-GGUF</a></p>
+
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>7B parameters</td></tr>
+                <tr><td>Architecture</td><td>Gemma</td></tr>
+                <tr><td>Quantization</td><td>Q4_K_M (4.37 GB)</td></tr>
+                <tr><td>License</td><td>Gemma Terms of Use</td></tr>
+            </table>
+
+            <h3>📁 Available Model Files</h3>
+            <pre>gemma-7b.Q4_K_M.gguf</pre>
+
+
             <!-- Performance Overview -->
-            <h2 id="performance">Performance Overview</h2>
+            <h2 id="performance">Model Comparison</h2>
             <table>
                 <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
                 <tr><td>EXAONE 4.0</td><td>1.2B</td><td>GGUF</td><td>Q4 / Q8</td><td>812 MB – 1.36 GB</td></tr>
                 <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
                 <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
+                <tr><td>Gemma 7B</td><td>7B</td><td>GGUF</td><td>Q4</td><td>~4.37 GB</td></tr>
             </table>
+
+            <!-- Fine-tuning Section -->
+            <h2 id="finetuning">Fine-tuning with Unsloth</h2>
+            <p>
+                We specialize in creating efficient fine-tuning workflows using <strong>Unsloth</strong>, which enables rapid training on consumer-grade hardware like T4 GPUs. Our methods are optimized for memory efficiency without sacrificing performance, making it possible to fine-tune models on local machines or free cloud instances.
+            </p>
+            <p>
+                Our primary fine-tuning guide is available as a Jupyter notebook. It covers the end-to-end process for adapting models to your specific needs. Explore our step-by-step guide to start fine-tuning your own models.
+            </p>
+            <p>➡️ <a href="https://github.com/SaiSivarajuIN/SS-Labs/tree/main/Fine-tuning" target="_blank">View Fine-tuning Notebook on GitHub</a></p>
 
             <!-- About Section -->
             <div class="spacer">
