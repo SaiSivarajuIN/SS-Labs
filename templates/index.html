@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SS Labs — Hugging Face Models Documentation</title>
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="icon" href="static/logo.png" type="image/png">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="icon" href="../static/logo.png" type="image/png">
     <style>
         body {
             margin: 0;
@@ -57,6 +57,10 @@
             display: block;
             padding: 4px 0;
             color: #222; /* Match body text color */
+        }
+        .roadmap li:hover {
+            background-color: #e9ecef; /* Light gray highlight */
+            border-radius: 4px; /* Optional: adds rounded corners */
         }
         .roadmap li a:hover {
             text-decoration: none; /* Remove underline on hover */
@@ -124,7 +128,7 @@
                 <path d="M4 6H20M4 12H20M4 18H20" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
-        <img src="static/logo.png" alt="SS Labs Logo" class="logo">
+        <img src="../static/logo.png" alt="SS Labs Logo" class="logo">
         <h1>SS Labs — Hugging Face Models Documentation</h1>
     </header>
 
@@ -137,6 +141,7 @@
             <li><a href="#mistral">Mistral-7B-v0.3-GGUF</a></li>
             <li><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></li>
             <li><a href="#gemma">Gemma-7B-GGUF</a></li>
+            <li><a href="#llama3">Llama-3-8B-GGUF</a></li>
             <li><a href="#performance">Model Comparison</a></li>
             <li><a href="#finetuning">Fine-tuning</a></li>
             <li><a href="#about">About SS Labs</a></li>
@@ -161,6 +166,7 @@
                 <li><b>Mistral-7B-v0.3-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
                 <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
                 <li><b>Gemma-7B-GGUF</b> — a lightweight, high-performance model from Google.</li>
+                <li><b>Llama-3-8B-GGUF</b> — a powerful, instruction-tuned model from Meta.</li>
             </ul>
             
             <!-- Compatibility Note -->
@@ -234,12 +240,28 @@ mistral-7b-v0.3.Q4_K_M.gguf</pre>
             <h3>📁 Available Model Files</h3>
             <pre>gemma-7b.Q4_K_M.gguf</pre>
 
+            <!-- Llama-3-8B-GGUF Section -->
+            <h2 id="llama3">Llama-3-8B-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Llama-3-8B-GGUF" target="_blank">hf.co/ss-lab/Llama-3-8B-GGUF</a></p>
+
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>8B parameters</td></tr>
+                <tr><td>Architecture</td><td>Llama 3</td></tr>
+                <tr><td>Quantization</td><td>Q4_K_M (~5.0 GB)</td></tr>
+                <tr><td>License</td><td>Llama 3 Community License</td></tr>
+            </table>
+
+            <h3>📁 Available Model Files</h3>
+            <pre>llama-3-8b.Q4_K_M.gguf</pre>
 
             <!-- Performance Overview -->
             <h2 id="performance">Model Comparison</h2>
             <table>
                 <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
                 <tr><td>EXAONE 4.0</td><td>1.2B</td><td>GGUF</td><td>Q4 / Q8</td><td>812 MB – 1.36 GB</td></tr>
+                <tr><td>Llama 3</td><td>8B</td><td>GGUF</td><td>Q4</td><td>~5.0 GB</td></tr>
                 <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
                 <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
                 <tr><td>Gemma 7B</td><td>7B</td><td>GGUF</td><td>Q4</td><td>~4.37 GB</td></tr>
