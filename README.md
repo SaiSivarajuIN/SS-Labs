@@ -10,4 +10,7 @@ A research and deployment group focused on efficient LLM conversions, fine-tunin
 ```
 EXAONE-4.0-1.2B-GGUF
 Mistral-7B-v0.3-GGUF
+Phi-3.5-mini-instruct-GGUF
+Gemma-7B-GGUF
+Llama-3-8B-GGUF
 ```
