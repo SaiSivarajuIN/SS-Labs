@@ -72,6 +72,24 @@
             text-decoration: none; /* Remove underline on hover */
             color: #232527; /* Optional: Add a color change for hover feedback */
         }
+        .roadmap .dropdown-toggle {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .roadmap .dropdown-toggle::after {
+            content: '›'; /* Arrow icon */
+            font-size: 1.5em;
+            transition: transform 0.2s ease-in-out;
+        }
+        .roadmap .dropdown-container.open > .dropdown-toggle::after {
+            transform: rotate(90deg);
+        }
+        .roadmap .dropdown-menu {
+            display: none; /* Hidden by default */
+            padding-left: 15px; /* Indent submenu */
+        }
         .main-content a {
             color: inherit; /* Use the parent text color */
             text-decoration: underline; /* Keep links underlined for accessibility */
@@ -143,11 +161,37 @@
         <h3>Roadmap</h3>
         <ul>
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#exaone">EXAONE-4.0-1.2B-GGUF</a></li>
-            <li><a href="#mistral">Mistral-7B-v0.3-GGUF</a></li>
-            <li><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></li>
-            <li><a href="#gemma">Gemma-7B-GGUF</a></li>
-            <li><a href="#llama3">Llama-3-8B-GGUF</a></li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">LG EXAONE</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#exaone">EXAONE-4.0-1.2B-GGUF</a></li>
+                </ul>
+            </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">Mistral AI</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#mistral">Mistral-7B-v0.3-GGUF</a></li>
+                </ul>
+            </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">Microsoft Phi</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></li>
+                </ul>
+            </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">Google Gemma</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#gemma">Gemma-7B-GGUF</a></li>
+                </ul>
+            </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">Meta Llama</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#llama3">Llama-3-8B-GGUF</a></li>
+                    <li><a href="#llama3.2">Llama-3.2-1B-Instruct-GGUF</a></li>
+                </ul>
+            </li>
             <li><a href="#performance">Model Comparison</a></li>
             <li><a href="#finetuning">Fine-tuning</a></li>
             <li><a href="#about">About SS Labs</a></li>
@@ -173,6 +217,7 @@
                 <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
                 <li><b>Gemma-7B-GGUF</b> — a lightweight, high-performance model from Google.</li>
                 <li><b>Llama-3-8B-GGUF</b> — a powerful, instruction-tuned model from Meta.</li>
+                <li><b>Llama-3.2-1B-Instruct-GGUF</b> — a compact, high-performance conversational model.</li>
             </ul>
             
             <!-- Compatibility Note -->
@@ -262,11 +307,28 @@ mistral-7b-v0.3.Q4_K_M.gguf</pre>
             <h3>📁 Available Model Files</h3>
             <pre>llama-3-8b.Q4_K_M.gguf</pre>
 
+            <!-- Llama-3.2-1B-Instruct-GGUF Section -->
+            <h2 id="llama3.2">Llama-3.2-1B-Instruct-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Llama-3.2-1B-Instruct-bnb-4bit-GGUF" target="_blank">hf.co/ss-lab/Llama-3.2-1B-Instruct-bnb-4bit-GGUF</a></p>
+
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>1B parameters</td></tr>
+                <tr><td>Architecture</td><td>Llama 3.2</td></tr>
+                <tr><td>Quantization</td><td>Q3_K_M (~0.6 GB)</td></tr>
+                <tr><td>License</td><td>Llama 3 Community License</td></tr>
+            </table>
+
+            <h3>📁 Available Model Files</h3>
+            <pre>Llama-3.2-1B-Instruct.Q3_K_M.gguf</pre>
+
             <!-- Performance Overview -->
             <h2 id="performance">Model Comparison</h2>
             <table>
                 <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
                 <tr><td>EXAONE 4.0</td><td>1.2B</td><td>GGUF</td><td>Q4 / Q8</td><td>812 MB – 1.36 GB</td></tr>
+                <tr><td>Llama 3.2</td><td>1B</td><td>GGUF</td><td>Q3</td><td>~0.6 GB</td></tr>
                 <tr><td>Llama 3</td><td>8B</td><td>GGUF</td><td>Q4</td><td>~5.0 GB</td></tr>
                 <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
                 <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
@@ -311,14 +373,28 @@ mistral-7b-v0.3.Q4_K_M.gguf</pre>
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.getElementById('menu-toggle');
             const roadmap = document.getElementById('roadmap');
-            const roadmapLinks = roadmap.querySelectorAll('a');
+            const roadmapLinks = roadmap.querySelectorAll('a:not(.dropdown-toggle)');
+            const dropdownToggles = roadmap.querySelectorAll('.dropdown-toggle');
 
             menuToggle.addEventListener('click', function () {
                 roadmap.classList.toggle('open');
             });
 
             // Close sidebar when a link is clicked
-            roadmapLinks.forEach(link => link.addEventListener('click', () => roadmap.classList.remove('open')));
+            roadmapLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) { // Only close on mobile
+                        roadmap.classList.remove('open');
+                    }
+                });
+            });
+
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('open');
+                    this.nextElementSibling.style.display = this.parentElement.classList.contains('open') ? 'block' : 'none';
+                });
+            });
         });
     </script>
 </body>
