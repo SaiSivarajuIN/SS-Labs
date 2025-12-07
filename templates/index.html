@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SS Labs — Hugging Face Models Documentation</title>
+    <title>SS Labs | GGUF</title>
     <link rel="stylesheet" href="../static/styles.css">
     <link rel="icon" href="../static/logo.png" type="image/png">
     <style>
@@ -177,6 +177,7 @@
                 <a class="dropdown-toggle">Microsoft Phi</a>
                 <ul class="dropdown-menu">
                     <li><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></li>
+                    <li><a href="#phi-4k">Phi-3-mini-4k-instruct-GGUF</a></li>
                 </ul>
             </li>
             <li class="dropdown-container">
@@ -216,6 +217,7 @@
                 <li><b>EXAONE-4.0-1.2B-GGUF</b> — a lightweight, multilingual conversational model.</li>
                 <li><b>Mistral-7b-v0.3-bnb-4bit-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
                 <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
+                <li><b>Phi-3-mini-4k-instruct-GGUF</b> — a compact, high-performance conversational model.</li>
                 <li><b>Gemma-7b-bnb-4bit-GGUF</b> — a lightweight, high-performance model from Google.</li>
                 <li><b>Gemma-2-2B-GGUF</b> — a new generation compact model from Google.</li>
                 <li><b>Llama-3-8b-bnb-4bit-GGUF</b> — a powerful, instruction-tuned model from Meta.</li>
@@ -276,6 +278,23 @@ mistral-7b-v0.3.Q4_K_M.gguf</pre>
 
             <h3>📁 Available Model Files</h3>
             <pre>phi-3.5-mini-instruct.Q4_K_M.gguf</pre>
+
+            <!-- Phi-3-mini-4k-instruct-GGUF Section -->
+            <h2 id="phi-4k">Phi-3-mini-4k-instruct-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Phi-3-mini-4k-instruct-GGUF" target="_blank">hf.co/ss-lab/Phi-3-mini-4k-instruct-GGUF</a></p>
+
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>3.8B parameters</td></tr>
+                <tr><td>Architecture</td><td>Phi-3 Mini 4k Instruct</td></tr>
+                <tr><td>Quantization</td><td>Q4_K_M (2.2 GB) / Q2_0 (1.1 GB)</td></tr>
+                <tr><td>License</td><td>MIT</td></tr>
+            </table>
+
+            <h3>📁 Available Model Files</h3>
+            <pre>Phi-3-mini-4k-instruct-q4_K_M.gguf
+Phi-3-mini-4k-instruct-tq2_0.gguf</pre>
 
             <!-- Gemma-7b-bnb-4bit-GGUF Section -->
             <h2 id="gemma">Gemma-7b-bnb-4bit-GGUF</h2>
@@ -350,6 +369,7 @@ mistral-7b-v0.3.Q4_K_M.gguf</pre>
                 <tr><td>Llama 3.2</td><td>1B</td><td>GGUF</td><td>Q3</td><td>~0.6 GB</td></tr>
                 <tr><td>Llama 3</td><td>8B</td><td>GGUF</td><td>Q4</td><td>~5.0 GB</td></tr>
                 <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
+                <tr><td>Phi-3 Mini 4k</td><td>3.8B</td><td>GGUF</td><td>Q2 / Q4</td><td>1.1 GB – 2.2 GB</td></tr>
                 <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
                 <tr><td>Gemma 7B</td><td>7B</td><td>GGUF</td><td>Q4</td><td>~4.37 GB</td></tr>
                 <tr><td>Gemma 2</td><td>2B</td><td>GGUF</td><td>Q8</td><td>~2.7 GB</td></tr>
