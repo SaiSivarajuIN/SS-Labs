@@ -200,6 +200,12 @@
                     <li><a href="#phi-4k">Phi-3-mini-4k-instruct-GGUF</a></li>
                 </ul>
             </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">Falcon</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#falcon">Falcon-H1-0.5B-Instruct-GGUF</a></li>
+                </ul>
+            </li>
             <li><a href="#performance">Model Comparison</a></li>
             <li><a href="#finetuning">Fine-tuning</a></li>
             <li><a href="#about">About SS Labs</a></li>
@@ -226,6 +232,7 @@
                 <li><b>Phi-3-mini-4k-instruct-GGUF</b> — a compact, high-performance conversational model.</li>
                 <li><b>Llama-3-8b-bnb-4bit-GGUF</b> — a powerful, instruction-tuned model from Meta.</li>
                 <li><b>Llama-3.2-1B-Instruct-GGUF</b> — a compact, high-performance conversational model.</li>
+                <li><b>Falcon-H1-0.5B-Instruct-GGUF</b> — a compact and efficient model from TII.</li>
             </ul>
             
             <!-- Compatibility Note -->
@@ -330,16 +337,33 @@ Phi-3-mini-4k-instruct-tq2_0.gguf</pre>
             <h3>📁 Available Model Files</h3>
             <pre>Llama-3.2-1B-Instruct.Q3_K_M.gguf</pre>
 
+            <!-- Falcon-H1-0.5B-Instruct-GGUF Section -->
+            <h2 id="falcon">Falcon-H1-0.5B-Instruct-GGUF</h2>
+            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Falcon-H1-0.5B-Instruct-GGUF" target="_blank">hf.co/ss-lab/Falcon-H1-0.5B-Instruct-GGUF</a></p>
+
+            <h3>Details</h3>
+            <table>
+                <tr><th>Property</th><th>Value</th></tr>
+                <tr><td>Model Size</td><td>0.5B parameters</td></tr>
+                <tr><td>Architecture</td><td>Falcon H1</td></tr>
+                <tr><td>Quantization</td><td>Q8_0 (~0.5 GB)</td></tr>
+                <tr><td>License</td><td>Apache 2.0</td></tr>
+            </table>
+
+            <h3>📁 Available Model Files</h3>
+            <pre>Falcon-H1-0.5B-Instruct-Q8_0.gguf</pre>
+
             <!-- Performance Overview -->
             <h2 id="performance">Model Comparison</h2>
             <table>
-                <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>GPU RAM (min)</th></tr>
+                <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>Size (approx)</th></tr>
                 <tr><td>Llama 3.2</td><td>1B</td><td>GGUF</td><td>Q3</td><td>~0.6 GB</td></tr>
                 <tr><td>Llama 3</td><td>8B</td><td>GGUF</td><td>Q4</td><td>~5.0 GB</td></tr>
                 <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
                 <tr><td>Phi-3 Mini 4k</td><td>3.8B</td><td>GGUF</td><td>Q2 / Q4</td><td>1.1 GB – 2.2 GB</td></tr>
                 <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
                 <tr><td>Mistral Nemo</td><td>12B</td><td>GGUF</td><td>TQ1_0</td><td>4.99 GB</td></tr>
+                <tr><td>Falcon H1</td><td>0.5B</td><td>GGUF</td><td>Q8</td><td>~0.5 GB</td></tr>
             </table>
 
             <!-- Fine-tuning Section -->
@@ -350,7 +374,7 @@ Phi-3-mini-4k-instruct-tq2_0.gguf</pre>
             <p>
                 Our primary fine-tuning guide is available as a Jupyter notebook. It covers the end-to-end process for adapting models to your specific needs. Explore our step-by-step guide to start fine-tuning your own models.
             </p>
-            <p>➡️ <a href="https://github.com/SaiSivarajuIN/SS-Labs/tree/main/Fine-tuning" target="_blank">View Fine-tuning Notebook on GitHub</a></p>
+            <p>➡️ <a href="https://github.com/SaiSivarajuIN/SS-Labs/tree/main/Fine-tuning/fine-tuning.ipynb" target="_blank">View Fine-tuning Notebook on GitHub</a></p>
 
             <!-- About Section -->
             <div class="spacer">
