@@ -1,2 +1,21 @@
-# Auto detect text files and perform LF normalization
+# Auto-detect text files and perform LF normalization
 * text=auto
+
+# Web resources
+*.html text
+*.css text
+*.js text
+*.json text
+
+# Python & Notebooks
+*.py text
+*.ipynb text
+
+# Binary files (Images & Models)
+*.png binary
+*.jpg binary
+*.ico binary
+*.gguf binary
+*.bin binary
+*.pt binary
+*.safetensors binary

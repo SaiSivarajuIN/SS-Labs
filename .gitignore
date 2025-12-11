@@ -1,1 +1,30 @@
-notes.txt 
+# Operating System
+.DS_Store
+Thumbs.db
+notes.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+venv/
+.venv/
+env/
+.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# IDE Settings
+.vscode/
+.idea/
+
+# Large Model Files (GGUF, PyTorch, etc.)
+*.gguf
+*.bin
+*.pt
+*.safetensors
+*.h5
+
+# Logs
+*.log

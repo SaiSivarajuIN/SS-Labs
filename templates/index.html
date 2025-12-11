@@ -5,163 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SS Labs | GGUF</title>
     <link rel="stylesheet" href="../static/styles.css">
-    <link rel="icon" href="../static/logo.png" type="image/png">
-    <style>
-        body {
-            margin: 0;
-            padding-top: 60px; /* Space for the fixed header */
-        }
-        .menu-toggle {
-            display: none; /* Hidden by default */
-            cursor: pointer;
-            margin-right: 15px;
-        }
-        .page-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background-color: #ffffff;
-            border-bottom: 1px solid #dee2e6;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-            box-sizing: border-box;
-            z-index: 1000;
-        }
-        .page-header h1 {
-            font-size: 1.2em;
-            margin: 0;
-        }
-        .page-header h1 .beta-tag {
-            display: inline-block;
-            font-size: 0.6em;
-            font-weight: bold;
-            color: #fff;
-            background-color: #007bff;
-            padding: 3px 7px;
-            border-radius: 4px;
-            vertical-align: middle;
-            margin-left: 10px;
-            text-transform: uppercase;
-            animation: blink 1.5s infinite;
-        }
-        .page-header .logo {
-            height: 40px;
-            width: auto;
-            margin-right: 15px;
-            vertical-align: middle;
-        }
-        .roadmap {
-            position: fixed;
-            top: 60px; /* Position below the header */
-            left: 0;
-            height: calc(100vh - 60px); /* Full height minus header */
-            width: 240px; /* Sidebar width */
-            background-color: #f8f9fa;
-            border-right: 1px solid #dee2e6;
-            padding: 20px;
-            overflow-y: auto;
-            box-sizing: border-box;
-            z-index: 900;
-            transition: transform 0.3s ease-in-out;
-        }
-        .roadmap ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .roadmap li a {
-            display: block;
-            padding: 4px 0;
-            color: #222; /* Match body text color */
-        }
-        .roadmap li:hover {
-            background-color: #e9ecef; /* Light gray highlight */
-            border-radius: 4px; /* Optional: adds rounded corners */
-        }
-        .roadmap li a:hover {
-            text-decoration: none; /* Remove underline on hover */
-            color: #232527; /* Optional: Add a color change for hover feedback */
-        }
-        .roadmap .dropdown-toggle {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .roadmap .dropdown-toggle::after {
-            content: '›'; /* Arrow icon */
-            font-size: 1.5em;
-            transition: transform 0.2s ease-in-out;
-        }
-        .roadmap .dropdown-container.open > .dropdown-toggle::after {
-            transform: rotate(90deg);
-        }
-        .roadmap .dropdown-menu {
-            display: none; /* Hidden by default */
-            padding-left: 15px; /* Indent submenu */
-        }
-        .main-content a {
-            color: inherit; /* Use the parent text color */
-            text-decoration: underline; /* Keep links underlined for accessibility */
-        }
-        .main-content a:hover {
-            text-decoration: none; /* Remove underline on hover for a clean look */
-        }
-        .main-content {
-            margin-left: 240px; /* Same as sidebar width */
-            max-width: 900px; /* Set a max-width for readability */
-            padding: 20px 40px; /* Add some horizontal padding */
-            margin: 0 auto 0 240px; /* Center the content relative to the remaining space */
-            transition: margin-left 0.3s ease-in-out;
-        }
-
-        /* Responsive styles for mobile */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block; /* Show hamburger menu */
-            }
-            .page-header h1 {
-                font-size: 1.2em;
-            }
-            .roadmap {
-                transform: translateX(-100%); /* Hide sidebar off-screen */
-                z-index: 1100; /* Ensure it's above main content but below header */
-            }
-            .roadmap.open {
-                transform: translateX(0); /* Show sidebar */
-            }
-            .main-content {
-                margin-left: 0; /* Content takes full width */
-                width: 100%;
-                max-width: none; /* Remove max-width on mobile */
-                padding: 20px;
-                box-sizing: border-box;
-            }
-            /* Remove logo from sidebar on mobile to avoid duplication */
-            .roadmap .logo {
-                display: none;
-            }
-            .content-wrapper {
-                padding: 0; /* Remove padding on mobile as main-content has it */
-            }
-        }
-
-        /* Add scroll margin to anchor targets to account for the fixed header */
-        h2[id] {
-            scroll-margin-top: 80px; /* Adjust this value to match your header's height + some padding */
-        }
-        .spacer {
-            scroll-margin-top: 80px;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-    </style>
+    <link rel="icon" href="../static/logo/logo.png" type="image/png">
 </head>
 <body>
     <header class="page-header">
@@ -170,8 +14,8 @@
                 <path d="M4 6H20M4 12H20M4 18H20" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
-        <img src="../static/logo.png" alt="SS Labs Logo" class="logo">
-        <h1>SS Labs — GGUF Documentation<span class="beta-tag">Lab Beta</span></h1>
+        <img src="../static/logo/logo.png" allogo.png alt="SS Labs Logo" class="logo">
+        <h1>SS Labs — GGUF Doc<span class="beta-tag">Lab Beta</span></h1>
     </header>
 
     <!-- Roadmap Navigation -->
@@ -206,6 +50,18 @@
                     <li><a href="#falcon">Falcon-H1-0.5B-Instruct-GGUF</a></li>
                 </ul>
             </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">Qwen</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#qwen">Qwen3-4B-Instruct-2507-GGUF</a></li>
+                </ul>
+            </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle">Liquid AI</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#lfm">LFM2-2.6B-GGUF</a></li>
+                </ul>
+            </li>
             <li><a href="#performance">Model Comparison</a></li>
             <li><a href="#finetuning">Fine-tuning</a></li>
             <li><a href="#about">About SS Labs</a></li>
@@ -225,145 +81,32 @@
 
             <!-- Model Overview -->
             <h2>Overview</h2>
-            <ul>
-                <li><b>Mistral-7b-v0.3-bnb-4bit-GGUF</b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
-                <li><b>Mistral-Nemo-Instruct-2407-GGUF</b> — a powerful 12B parameter model from Mistral AI.</li>
-                <li><b>Phi-3.5-mini-instruct-GGUF</b> — a lightweight, high-performance conversational model.</li>
-                <li><b>Phi-3-mini-4k-instruct-GGUF</b> — a compact, high-performance conversational model.</li>
-                <li><b>Llama-3-8b-bnb-4bit-GGUF</b> — a powerful, instruction-tuned model from Meta.</li>
-                <li><b>Llama-3.2-1B-Instruct-GGUF</b> — a compact, high-performance conversational model.</li>
-                <li><b>Falcon-H1-0.5B-Instruct-GGUF</b> — a compact and efficient model from TII.</li>
+            <ul class="model-overview-list">
+                <li><b><a href="#mistral">Mistral-7b-v0.3-bnb-4bit-GGUF</a></b> — a finetuned version of Mistral 7B optimized for GGUF-based inference.</li>
+                <li><b><a href="#mistral-nemo">Mistral-Nemo-Instruct-2407-GGUF</a></b> — a powerful 12B parameter model from Mistral AI.</li>
+                <li><b><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></b> — a lightweight, high-performance conversational model.</li>
+                <li><b><a href="#phi-4k">Phi-3-mini-4k-instruct-GGUF</a></b> — a compact, high-performance conversational model.</li>
+                <li><b><a href="#llama3">Llama-3-8b-bnb-4bit-GGUF</a></b> — a powerful, instruction-tuned model from Meta.</li>
+                <li><b><a href="#llama3.2">Llama-3.2-1B-Instruct-GGUF</a></b> — a compact, high-performance conversational model.</li>
+                <li><b><a href="#falcon">Falcon-H1-0.5B-Instruct-GGUF</a></b> — a compact and efficient model from TII.</li>
+                <li><b><a href="#qwen">Qwen3-4B-Instruct-2507-GGUF</a></b> — a high-performance instruction-tuned model from Qwen.</li>
+                <li><b><a href="#lfm">LFM2-2.6B-GGUF</a></b> — a compact and efficient foundation model.</li>
             </ul>
             
             <!-- Compatibility Note -->
             <p>All models are compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
 
-            <!-- Mistral-7b-v0.3-bnb-4bit-GGUF Section -->
-            <h2 id="mistral">Mistral-7b-v0.3-bnb-4bit-GGUF</h2>
-            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Mistral-7b-v0.3-bnb-4bit-GGUF" target="_blank">hf.co/ss-lab/Mistral-7b-v0.3-bnb-4bit-GGUF</a></p>
-
-            <h3>Details</h3>
-            <table>
-                <tr><th>Property</th><th>Value</th></tr>
-                <tr><td>Model Size</td><td>7B parameters</td></tr>
-                <tr><td>Architecture</td><td>Mistral 7B v0.3</td></tr>
-                <tr><td>Quantization</td><td>Q3_K_M (3.52 GB) / Q4_K_M (4.37 GB)</td></tr>
-                <tr><td>License</td><td>Apache 2.0</td></tr>
-            </table>
-
-            <h3>📁 Available Model Files</h3>
-            <pre>mistral-7b-v0.3.Q3_K_M.gguf
-mistral-7b-v0.3.Q4_K_M.gguf</pre>
-
-            <!-- Mistral-Nemo-Instruct-2407-GGUF Section -->
-            <h2 id="mistral-nemo">Mistral-Nemo-Instruct-2407-GGUF</h2>
-            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Mistral-Nemo-Instruct-2407-bnb-GGUF" target="_blank">hf.co/ss-lab/Mistral-Nemo-Instruct-2407-bnb-GGUF</a></p>
-
-            <h3>Details</h3>
-            <table>
-                <tr><th>Property</th><th>Value</th></tr>
-                <tr><td>Model Size</td><td>12B parameters</td></tr>
-                <tr><td>Architecture</td><td>Mistral Nemo Instruct 2407</td></tr>
-                <tr><td>Quantization</td><td>TQ1_0 (4.99 GB)</td></tr>
-                <tr><td>License</td><td>Mistral AI Non-Production License</td></tr>
-            </table>
-
-            <h3>📁 Available Model Files</h3>
-            <pre>Mistral-Nemo-Instruct-2407.TQ1_0.gguf</pre>
-
-            <!-- Phi-3.5-mini-instruct.GGUF Section -->
-            <h2 id="phi">Phi-3.5-mini-instruct-GGUF</h2>
-            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Phi-3.5-mini-instruct-GGUF" target="_blank">hf.co/ss-lab/Phi-3.5-mini-instruct-GGUF</a></p>
-
-            <h3>Details</h3>
-            <table>
-                <tr><th>Property</th><th>Value</th></tr>
-                <tr><td>Model Size</td><td>3.8B parameters</td></tr>
-                <tr><td>Architecture</td><td>Phi-3.5 Mini Instruct</td></tr>
-                <tr><td>Quantization</td><td>Q4_K_M (2.2 GB)</td></tr>
-                <tr><td>License</td><td>MIT</td></tr>
-            </table>
-
-            <h3>📁 Available Model Files</h3>
-            <pre>phi-3.5-mini-instruct.Q4_K_M.gguf</pre>
-
-            <!-- Phi-3-mini-4k-instruct-GGUF Section -->
-            <h2 id="phi-4k">Phi-3-mini-4k-instruct-GGUF</h2>
-            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Phi-3-mini-4k-instruct-GGUF" target="_blank">hf.co/ss-lab/Phi-3-mini-4k-instruct-GGUF</a></p>
-
-            <h3>Details</h3>
-            <table>
-                <tr><th>Property</th><th>Value</th></tr>
-                <tr><td>Model Size</td><td>3.8B parameters</td></tr>
-                <tr><td>Architecture</td><td>Phi-3 Mini 4k Instruct</td></tr>
-                <tr><td>Quantization</td><td>Q4_K_M (2.2 GB) / Q2_0 (1.1 GB)</td></tr>
-                <tr><td>License</td><td>MIT</td></tr>
-            </table>
-
-            <h3>📁 Available Model Files</h3>
-            <pre>Phi-3-mini-4k-instruct-q4_K_M.gguf
-Phi-3-mini-4k-instruct-tq2_0.gguf</pre>
-
-
-            <!-- Llama-3-8B-GGUF Section -->
-            <h2 id="llama3">Llama-3-8b-bnb-4bit-GGUF</h2>
-            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Llama-3-8b-bnb-4bit-GGUF" target="_blank">hf.co/ss-lab/Llama-3-8b-bnb-4bit-GGUF</a></p>
-
-            <h3>Details</h3>
-            <table>
-                <tr><th>Property</th><th>Value</th></tr>
-                <tr><td>Model Size</td><td>8B parameters</td></tr>
-                <tr><td>Architecture</td><td>Llama 3</td></tr>
-                <tr><td>Quantization</td><td>Q4_K_M (~5.0 GB)</td></tr>
-                <tr><td>License</td><td>Llama 3 Community License</td></tr>
-            </table>
-
-            <h3>📁 Available Model Files</h3>
-            <pre>llama-3-8b.Q4_K_M.gguf</pre>
-
-            <!-- Llama-3.2-1B-Instruct-GGUF Section -->
-            <h2 id="llama3.2">Llama-3.2-1B-Instruct-GGUF</h2>
-            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Llama-3.2-1B-Instruct-bnb-4bit-GGUF" target="_blank">hf.co/ss-lab/Llama-3.2-1B-Instruct-bnb-4bit-GGUF</a></p>
-
-            <h3>Details</h3>
-            <table>
-                <tr><th>Property</th><th>Value</th></tr>
-                <tr><td>Model Size</td><td>1B parameters</td></tr>
-                <tr><td>Architecture</td><td>Llama 3.2</td></tr>
-                <tr><td>Quantization</td><td>Q3_K_M (~0.6 GB)</td></tr>
-                <tr><td>License</td><td>Llama 3 Community License</td></tr>
-            </table>
-
-            <h3>📁 Available Model Files</h3>
-            <pre>Llama-3.2-1B-Instruct.Q3_K_M.gguf</pre>
-
-            <!-- Falcon-H1-0.5B-Instruct-GGUF Section -->
-            <h2 id="falcon">Falcon-H1-0.5B-Instruct-GGUF</h2>
-            <p><b>Repository:</b> <a href="https://huggingface.co/ss-lab/Falcon-H1-0.5B-Instruct-GGUF" target="_blank">hf.co/ss-lab/Falcon-H1-0.5B-Instruct-GGUF</a></p>
-
-            <h3>Details</h3>
-            <table>
-                <tr><th>Property</th><th>Value</th></tr>
-                <tr><td>Model Size</td><td>0.5B parameters</td></tr>
-                <tr><td>Architecture</td><td>Falcon H1</td></tr>
-                <tr><td>Quantization</td><td>Q8_0 (~0.5 GB)</td></tr>
-                <tr><td>License</td><td>Apache 2.0</td></tr>
-            </table>
-
-            <h3>📁 Available Model Files</h3>
-            <pre>Falcon-H1-0.5B-Instruct-Q8_0.gguf</pre>
+            <div id="models-container"></div>
 
             <!-- Performance Overview -->
             <h2 id="performance">Model Comparison</h2>
-            <table>
-                <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>Size (approx)</th></tr>
-                <tr><td>Llama 3.2</td><td>1B</td><td>GGUF</td><td>Q3</td><td>~0.6 GB</td></tr>
-                <tr><td>Llama 3</td><td>8B</td><td>GGUF</td><td>Q4</td><td>~5.0 GB</td></tr>
-                <tr><td>Phi-3.5 Mini</td><td>3.8B</td><td>GGUF</td><td>Q4</td><td>~2.2 GB</td></tr>
-                <tr><td>Phi-3 Mini 4k</td><td>3.8B</td><td>GGUF</td><td>Q2 / Q4</td><td>1.1 GB – 2.2 GB</td></tr>
-                <tr><td>Mistral 7B</td><td>7B</td><td>GGUF</td><td>Q3 / Q4</td><td>3.52 GB – 4.37 GB</td></tr>
-                <tr><td>Mistral Nemo</td><td>12B</td><td>GGUF</td><td>TQ1_0</td><td>4.99 GB</td></tr>
-                <tr><td>Falcon H1</td><td>0.5B</td><td>GGUF</td><td>Q8</td><td>~0.5 GB</td></tr>
+            <table id="comparison-table">
+                <thead>
+                    <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>Size (approx)</th></tr>
+                </thead>
+                <tbody>
+                    <!-- Data loaded from CSV -->
+                </tbody>
             </table>
 
             <!-- Fine-tuning Section -->
@@ -399,33 +142,9 @@ Phi-3-mini-4k-instruct-tq2_0.gguf</pre>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('menu-toggle');
-            const roadmap = document.getElementById('roadmap');
-            const roadmapLinks = roadmap.querySelectorAll('a:not(.dropdown-toggle)');
-            const dropdownToggles = roadmap.querySelectorAll('.dropdown-toggle');
-
-            menuToggle.addEventListener('click', function () {
-                roadmap.classList.toggle('open');
-            });
-
-            // Close sidebar when a link is clicked
-            roadmapLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) { // Only close on mobile
-                        roadmap.classList.remove('open');
-                    }
-                });
-            });
-
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    this.parentElement.classList.toggle('open');
-                    this.nextElementSibling.style.display = this.parentElement.classList.contains('open') ? 'block' : 'none';
-                });
-            });
-        });
-    </script>
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/coming_soon.js"></script>
+    <script src="../static/js/models.js"></script>
+    <script src="../static/js/model_comparison.js"></script>
 </body>
 </html>

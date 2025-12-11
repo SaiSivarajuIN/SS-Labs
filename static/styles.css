@@ -2,8 +2,9 @@ body {
     font-family: "Segoe UI", Roboto, sans-serif;
     color: #222;
     line-height: 1.6;
-    /* General body styles like margin are now handled by inline styles in index.html */
-    background-color: #ffffff; /* Match the page-header background for consistency */
+    background-color: #ffffff;
+    margin: 0;
+    padding-top: 60px; /* Space for the fixed header */
 }
 h1, h2, h3 {
     color: #111;
@@ -29,7 +30,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 table {
     width: 100%;
@@ -60,6 +61,114 @@ th {
     height: 50px;
 }
 
+.menu-toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    margin-right: 15px;
+}
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.page-header h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+.page-header h1 .beta-tag {
+    display: inline-block;
+    font-size: 0.6em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    padding: 3px 7px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 10px;
+    text-transform: uppercase;
+    animation: blink 1.5s infinite;
+}
+.page-header .logo {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+.roadmap {
+    position: fixed;
+    top: 60px; /* Position below the header */
+    left: 0;
+    height: calc(100vh - 60px); /* Full height minus header */
+    width: 280px; /* Sidebar width */
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    z-index: 900;
+    transition: transform 0.3s ease-in-out;
+}
+.roadmap ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.roadmap li a {
+    display: block;
+    padding: 4px 0;
+    color: #222; /* Match body text color */
+}
+.roadmap li:hover {
+    background-color: #e9ecef; /* Light gray highlight */
+    border-radius: 4px; /* Optional: adds rounded corners */
+}
+.roadmap li a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #232527; /* Optional: Add a color change for hover feedback */
+}
+.roadmap .dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.roadmap .dropdown-toggle::after {
+    content: '›'; /* Arrow icon */
+    font-size: 1.5em;
+    transition: transform 0.2s ease-in-out;
+    margin-left: auto;
+}
+.roadmap .dropdown-container.open > .dropdown-toggle::after {
+    transform: rotate(90deg);
+}
+.roadmap .dropdown-menu {
+    display: none; /* Hidden by default */
+    padding-left: 15px; /* Indent submenu */
+}
+.main-content a {
+    color: inherit; /* Use the parent text color */
+    text-decoration: none;
+}
+.main-content a:hover {
+    text-decoration: none;
+}
+.main-content {
+    margin-left: 280px; /* Same as sidebar width */
+    max-width: 900px; /* Set a max-width for readability */
+    padding: 20px 40px; /* Add some horizontal padding */
+    margin: 0 auto 0 280px; /* Center the content relative to the remaining space */
+    transition: margin-left 0.3s ease-in-out;
+}
+
 /* Footer styles */
 footer {
     text-align: center;
@@ -68,4 +177,75 @@ footer {
     border-top: 1px solid #ccc;
     font-size: 0.9em;
     color: #666;
+}
+
+/* Coming soon styles */
+.coming-soon {
+    font-size: 0.85em;
+    color: #ff5722;
+    font-weight: 700;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+a.disabled-coming-soon {
+    pointer-events: none;
+    color: #6c757d !important;
+    text-decoration: none !important;
+    opacity: 0.85;
+    cursor: default;
+}
+
+/* Dropdown toggle "has coming soon" indicator (colored dot) */
+.coming-soon-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff5722;
+    box-shadow: 0 0 0 4px rgba(255,87,34,0.12);
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+    }
+    .page-header h1 {
+        font-size: 1.2em;
+    }
+    .roadmap {
+        transform: translateX(-100%); /* Hide sidebar off-screen */
+        z-index: 1100; /* Ensure it's above main content but below header */
+    }
+    .roadmap.open {
+        transform: translateX(0); /* Show sidebar */
+    }
+    .main-content {
+        margin-left: 0; /* Content takes full width */
+        width: 100%;
+        max-width: none; /* Remove max-width on mobile */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    /* Remove logo from sidebar on mobile to avoid duplication */
+    .roadmap .logo {
+        display: none;
+    }
+    .content-wrapper {
+        padding: 0; /* Remove padding on mobile as main-content has it */
+    }
+}
+
+/* Add scroll margin to anchor targets to account for the fixed header */
+h2[id] {
+    scroll-margin-top: 80px; /* Adjust this value to match your header's height + some padding */
+}
+.spacer {
+    scroll-margin-top: 80px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
