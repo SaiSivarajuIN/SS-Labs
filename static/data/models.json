@@ -7,7 +7,7 @@
             "Model Size": "7B parameters",
             "Architecture": "Mistral 7B v0.3",
             "Quantization": "Q3_K_M (3.52 GB) / Q4_K_M (4.37 GB)",
-            "License": "Apache 2.0"
+            "License": "MIT"
         },
         "files": [
             "mistral-7b-v0.3.Q3_K_M.gguf",
@@ -22,7 +22,7 @@
             "Model Size": "12B parameters",
             "Architecture": "Mistral Nemo Instruct 2407",
             "Quantization": "TQ1_0 (4.99 GB)",
-            "License": "Mistral AI Non-Production License"
+            "License": "MIT"
         },
         "files": [
             "Mistral-Nemo-Instruct-2407.TQ1_0.gguf"
@@ -65,7 +65,7 @@
             "Model Size": "8B parameters",
             "Architecture": "Llama 3",
             "Quantization": "Q4_K_M (~5.0 GB)",
-            "License": "Llama 3 Community License"
+            "License": "MIT"
         },
         "files": [
             "llama-3-8b.Q4_K_M.gguf"
@@ -79,7 +79,7 @@
             "Model Size": "1B parameters",
             "Architecture": "Llama 3.2",
             "Quantization": "Q3_K_M (~0.6 GB)",
-            "License": "Llama 3 Community License"
+            "License": "MIT"
         },
         "files": [
             "Llama-3.2-1B-Instruct.Q3_K_M.gguf"
@@ -93,7 +93,7 @@
             "Model Size": "0.5B parameters",
             "Architecture": "Falcon H1",
             "Quantization": "Q8_0 (~0.5 GB)",
-            "License": "Apache 2.0"
+            "License": "MIT"
         },
         "files": [
             "Falcon-H1-0.5B-Instruct-Q8_0.gguf"
@@ -102,12 +102,12 @@
     {
         "id": "qwen",
         "name": "Qwen3-4B-Instruct-2507-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Qwen3-4B-Instruct-2507-GGUF",
+        "repo": "https://huggingface.co/ss-lab/Qwen3    -4B-Instruct-2507-GGUF",
         "details": {
             "Model Size": "4B parameters",
             "Architecture": "Qwen 3",
             "Quantization": "Q8_0 (4.28 GB)",
-            "License": "Apache 2.0"
+            "License": "MIT"
         },
         "files": [
             "Qwen3-4B-Instruct-2507-Q8_0.gguf"
@@ -121,7 +121,7 @@
             "Model Size": "2.6B parameters",
             "Architecture": "LFM 2",
             "Quantization": "Q4_0 (1.48 GB)",
-            "License": "Apache 2.0"
+            "License": "MIT"
         },
         "files": [
             "LFM2-2.6B-Q4_0.gguf"
