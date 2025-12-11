@@ -3,8 +3,8 @@
         "model": "Mistral-7b-v0.3",
         "params": "7B",
         "format": "GGUF",
-        "quant": "Q4_K_M",
-        "size": "4.37 GB"
+        "quant": "Q3_K_M / Q4_K_M",
+        "size": "3.52 GB / 4.37 GB"
     },
     {
         "model": "Mistral-Nemo-Instruct",

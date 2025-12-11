@@ -53,8 +53,7 @@
             "License": "MIT"
         },
         "files": [
-            "Phi-3-mini-4k-instruct-q4_K_M.gguf",
-            "Phi-3-mini-4k-instruct-tq2_0.gguf"
+            "Phi-3-mini-4k-instruct-q4_K_M.gguf"
         ]
     },
     {
@@ -82,7 +81,8 @@
             "License": "MIT"
         },
         "files": [
-            "Llama-3.2-1B-Instruct.Q3_K_M.gguf"
+            "Llama-3.2-1B-Instruct.Q3_K_M.gguf",
+            "Llama-3.2-1B-Instruct.Q4_K_M.gguf"
         ]
     },
     {
