@@ -2,7 +2,7 @@
     {
         "id": "mistral",
         "name": "Mistral-7b-v0.3-bnb-4bit-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Mistral-7b-v0.3-bnb-4bit-GGUF",
+        "repo": "Mistral-7b-v0.3-bnb-4bit-GGUF",
         "details": {
             "Model Size": "7B parameters",
             "Architecture": "Mistral 7B v0.3",
@@ -17,7 +17,7 @@
     {
         "id": "mistral-nemo",
         "name": "Mistral-Nemo-Instruct-2407-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Mistral-Nemo-Instruct-2407-bnb-GGUF",
+        "repo": "Mistral-Nemo-Instruct-2407-bnb-GGUF",
         "details": {
             "Model Size": "12B parameters",
             "Architecture": "Mistral Nemo Instruct 2407",
@@ -31,7 +31,7 @@
     {
         "id": "llama3",
         "name": "Llama-3-8b-bnb-4bit-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Llama-3-8b-bnb-4bit-GGUF",
+        "repo": "Llama-3-8b-bnb-4bit-GGUF",
         "details": {
             "Model Size": "8B parameters",
             "Architecture": "Llama 3",
@@ -45,7 +45,7 @@
     {
         "id": "llama3.2",
         "name": "Llama-3.2-1B-Instruct-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Llama-3.2-1B-Instruct-bnb-4bit-GGUF",
+        "repo": "Llama-3.2-1B-Instruct-bnb-4bit-GGUF",
         "details": {
             "Model Size": "1B parameters",
             "Architecture": "Llama 3.2",
@@ -60,7 +60,7 @@
     {
         "id": "phi",
         "name": "Phi-3.5-mini-instruct-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Phi-3.5-mini-instruct-GGUF",
+        "repo": "Phi-3.5-mini-instruct-GGUF",
         "details": {
             "Model Size": "3.8B parameters",
             "Architecture": "Phi-3.5 Mini Instruct",
@@ -74,7 +74,7 @@
     {
         "id": "phi-4k",
         "name": "Phi-3-mini-4k-instruct-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Phi-3-mini-4k-instruct-GGUF",
+        "repo": "Phi-3-mini-4k-instruct-GGUF",
         "details": {
             "Model Size": "3.8B parameters",
             "Architecture": "Phi-3 Mini 4k Instruct",
@@ -88,7 +88,7 @@
     {
         "id": "falcon",
         "name": "Falcon-H1-0.5B-Instruct-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Falcon-H1-0.5B-Instruct-GGUF",
+        "repo": "Falcon-H1-0.5B-Instruct-GGUF",
         "details": {
             "Model Size": "0.5B parameters",
             "Architecture": "Falcon H1",
@@ -102,7 +102,7 @@
     {
         "id": "qwen",
         "name": "Qwen3-4B-Instruct-2507-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Qwen3-4B-Instruct-2507-GGUF",
+        "repo": "Qwen3-4B-Instruct-2507-GGUF",
         "details": {
             "Model Size": "4B parameters",
             "Architecture": "Qwen 3",
@@ -116,7 +116,7 @@
     {
         "id": "lfm",
         "name": "LFM2-2.6B-GGUF",
-        "repo": "https://huggingface.co/ss-lab/LFM2-2.6B-GGUF",
+        "repo": "LFM2-2.6B-GGUF",
         "details": {
             "Model Size": "2.6B parameters",
             "Architecture": "LFM 2",

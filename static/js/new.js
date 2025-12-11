@@ -1,12 +1,5 @@
-// List exact model names (strings) to mark as "New".
-// When you add a model here (exact text match, e.g. "Qwen3-4B-Instruct-2507-GGUF"),
-// the index page will:
-//  - show a "New" label in the Overview next to the bold model name,
-//  - show "(New)" in the Roadmap links for that model,
-//  - mark dropdowns containing new models.
-//
-// To remove the "New" status, remove it from this array.
-window.newModels = ["Qwen3-4B-Instruct-2507-GGUF"];
+// List of "New" models is fetched from ../static/data/new.json
+window.newModels = [];
 
 document.addEventListener('DOMContentLoaded', function () {
     // Apply "New" behavior based on window.newModels
@@ -76,5 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     };
-    window.markNew();
+
+    fetch('../static/data/new.json')
+        .then(response => response.json())
+        .then(data => {
+            window.newModels = data;
+            window.markNew();
+        })
+        .catch(error => console.error('Error loading new models:', error));
 });

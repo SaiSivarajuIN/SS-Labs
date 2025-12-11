@@ -21,10 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 pRepo.appendChild(bRepo);
                 
                 const aRepo = document.createElement('a');
-                aRepo.href = model.repo;
+                const fullRepoUrl = 'https://huggingface.co/ss-lab/' + model.repo;
+                aRepo.href = fullRepoUrl;
                 aRepo.target = '_blank';
                 // Format repo text like hf.co/...
-                aRepo.textContent = model.repo.replace('https://huggingface.co/', 'hf.co/');
+                aRepo.textContent = fullRepoUrl.replace('https://huggingface.co/', 'hf.co/');
                 pRepo.appendChild(aRepo);
                 section.appendChild(pRepo);
 

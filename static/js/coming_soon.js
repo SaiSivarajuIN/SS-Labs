@@ -6,7 +6,7 @@
 //  - disable (and visually muted) the HF repository link for that model.
 //
 // To re-enable a model, remove it from this array.
-window.comingSoonModels = ["LFM2-2.6B-GGUF"];
+window.comingSoonModels = [];
 
 document.addEventListener('DOMContentLoaded', function () {
     // Apply "Coming Soon" behavior based on window.comingSoonModels
@@ -101,5 +101,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     };
-    window.markComingSoon();
+
+    fetch('../static/data/coming_soon.json')
+        .then(response => response.json())
+        .then(data => {
+            window.comingSoonModels = data;
+            window.markComingSoon();
+        })
+        .catch(error => console.error('Error loading coming soon models:', error));
 });

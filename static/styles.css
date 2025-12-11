@@ -209,7 +209,7 @@ a.disabled-coming-soon {
 /* New tag styles */
 .new-tag {
     font-size: 0.85em;
-    color: #28a745;
+    color: #007bff;
     font-weight: 700;
     margin-left: 6px;
     vertical-align: middle;
@@ -220,7 +220,7 @@ a.disabled-coming-soon {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #28a745;
+    background-color: #007bff;
     box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.12);
     display: inline-block;
     margin-left: 10px;
