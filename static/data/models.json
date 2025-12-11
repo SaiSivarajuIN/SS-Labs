@@ -29,34 +29,6 @@
         ]
     },
     {
-        "id": "phi",
-        "name": "Phi-3.5-mini-instruct-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Phi-3.5-mini-instruct-GGUF",
-        "details": {
-            "Model Size": "3.8B parameters",
-            "Architecture": "Phi-3.5 Mini Instruct",
-            "Quantization": "Q4_K_M (2.2 GB)",
-            "License": "MIT"
-        },
-        "files": [
-            "phi-3.5-mini-instruct.Q4_K_M.gguf"
-        ]
-    },
-    {
-        "id": "phi-4k",
-        "name": "Phi-3-mini-4k-instruct-GGUF",
-        "repo": "https://huggingface.co/ss-lab/Phi-3-mini-4k-instruct-GGUF",
-        "details": {
-            "Model Size": "3.8B parameters",
-            "Architecture": "Phi-3 Mini 4k Instruct",
-            "Quantization": "Q4_K_M (2.2 GB)",
-            "License": "MIT"
-        },
-        "files": [
-            "Phi-3-mini-4k-instruct-q4_K_M.gguf"
-        ]
-    },
-    {
         "id": "llama3",
         "name": "Llama-3-8b-bnb-4bit-GGUF",
         "repo": "https://huggingface.co/ss-lab/Llama-3-8b-bnb-4bit-GGUF",
@@ -83,6 +55,34 @@
         "files": [
             "Llama-3.2-1B-Instruct.Q3_K_M.gguf",
             "Llama-3.2-1B-Instruct.Q4_K_M.gguf"
+        ]
+    },
+    {
+        "id": "phi",
+        "name": "Phi-3.5-mini-instruct-GGUF",
+        "repo": "https://huggingface.co/ss-lab/Phi-3.5-mini-instruct-GGUF",
+        "details": {
+            "Model Size": "3.8B parameters",
+            "Architecture": "Phi-3.5 Mini Instruct",
+            "Quantization": "Q4_K_M (2.2 GB)",
+            "License": "MIT"
+        },
+        "files": [
+            "phi-3.5-mini-instruct.Q4_K_M.gguf"
+        ]
+    },
+    {
+        "id": "phi-4k",
+        "name": "Phi-3-mini-4k-instruct-GGUF",
+        "repo": "https://huggingface.co/ss-lab/Phi-3-mini-4k-instruct-GGUF",
+        "details": {
+            "Model Size": "3.8B parameters",
+            "Architecture": "Phi-3 Mini 4k Instruct",
+            "Quantization": "Q4_K_M (2.2 GB)",
+            "License": "MIT"
+        },
+        "files": [
+            "Phi-3-mini-4k-instruct-q4_K_M.gguf"
         ]
     },
     {
