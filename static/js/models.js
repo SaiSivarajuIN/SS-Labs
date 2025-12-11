@@ -41,8 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 const trHead = document.createElement('tr');
                 const thProp = document.createElement('th');
                 thProp.textContent = 'Property';
+                thProp.style.width = '50%';
                 const thVal = document.createElement('th');
                 thVal.textContent = 'Value';
+                thVal.style.width = '50%';
                 trHead.appendChild(thProp);
                 trHead.appendChild(thVal);
                 tbody.appendChild(trHead);
