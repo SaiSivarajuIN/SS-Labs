@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Files Header
                 const h3Files = document.createElement('h3');
-                h3Files.textContent = '📁 Available Model Files';
+                h3Files.textContent = 'Available Model Files';
                 section.appendChild(h3Files);
 
                 // Pre block
