@@ -83,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if (window.markComingSoon) {
                 window.markComingSoon();
             }
+
+            // Re-apply New logic if available
+            if (window.markNew) {
+                window.markNew();
+            }
         })
         .catch(error => console.error("Error loading models:", error));
 });

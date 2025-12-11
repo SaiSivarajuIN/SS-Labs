@@ -206,6 +206,26 @@ a.disabled-coming-soon {
     margin-left: 10px;
 }
 
+/* New tag styles */
+.new-tag {
+    font-size: 0.85em;
+    color: #28a745;
+    font-weight: 700;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* Dropdown toggle "has new" indicator (colored dot) */
+.new-tag-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #28a745;
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.12);
+    display: inline-block;
+    margin-left: 10px;
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .menu-toggle {
