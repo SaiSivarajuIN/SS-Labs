@@ -226,6 +226,11 @@ a.disabled-coming-soon {
     margin-left: 10px;
 }
 
+/* If both dots are present, hide the new-tag-dot */
+.dropdown-toggle:has(.coming-soon-dot) .new-tag-dot {
+    display: none;
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .menu-toggle {
