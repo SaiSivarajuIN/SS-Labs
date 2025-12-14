@@ -88,8 +88,8 @@ th {
     display: inline-block;
     font-size: 0.6em;
     font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
+    color: #ffffff;           /* keep white text */
+    background-color: #004085; /* darker blue for better contrast */
     padding: 3px 7px;
     border-radius: 4px;
     vertical-align: middle;
@@ -182,7 +182,7 @@ footer {
 /* Coming soon styles */
 .coming-soon {
     font-size: 0.85em;
-    color: #ff5722;
+    color: #b23f00;           /* darker orange/brown for sufficient contrast */
     font-weight: 700;
     margin-left: 6px;
     vertical-align: middle;
@@ -200,8 +200,8 @@ a.disabled-coming-soon {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ff5722;
-    box-shadow: 0 0 0 4px rgba(255,87,34,0.12);
+    background-color: #d84315; /* darker orange */
+    box-shadow: 0 0 0 4px rgba(216,67,21,0.12); /* matching translucent halo */
     display: inline-block;
     margin-left: 10px;
 }
@@ -209,7 +209,7 @@ a.disabled-coming-soon {
 /* New tag styles */
 .new-tag {
     font-size: 0.85em;
-    color: #007bff;
+    color: #004085;           /* darker blue for better contrast */
     font-weight: 700;
     margin-left: 6px;
     vertical-align: middle;
@@ -220,8 +220,8 @@ a.disabled-coming-soon {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #007bff;
-    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.12);
+    background-color: #004085; /* darker blue */
+    box-shadow: 0 0 0 4px rgba(0,64,133,0.12); /* matching translucent halo */
     display: inline-block;
     margin-left: 10px;
 }
