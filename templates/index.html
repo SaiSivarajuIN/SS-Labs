@@ -62,6 +62,12 @@
                     <li><a href="#lfm">LFM2-2.6B-GGUF</a></li>
                 </ul>
             </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle" href="#">IBM</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#ibm-granite">IBM-granite-4.0-micro-GGUF</a></li>
+                </ul>
+            </li>
             <li><a href="#performance">Model Comparison</a></li>
             <li><a href="#finetuning">Fine-tuning</a></li>
             <li><a href="#about">About SS Labs</a></li>
@@ -83,24 +89,9 @@
 
             <!-- Model Overview -->
             <h2 id="overview">Overview</h2>
-            <ul class="model-overview-list">
-                <li><b><a href="#mistral">Mistral-7b-v0.3-bnb-4bit-GGUF</a></b></li>
-                <li><b><a href="#mistral-nemo">Mistral-Nemo-Instruct-2407-GGUF</a></b></li>
-                <li><b><a href="#phi">Phi-3.5-mini-instruct-GGUF</a></b></li>
-                <li><b><a href="#phi-4k">Phi-3-mini-4k-instruct-GGUF</a></b></li>
-                <li><b><a href="#llama3">Llama-3-8b-bnb-4bit-GGUF</a></b></li>
-                <li><b><a href="#llama3.2">Llama-3.2-1B-Instruct-GGUF</a></b></li>
-                <li><b><a href="#falcon">Falcon-H1-0.5B-Instruct-GGUF</a></b></li>
-                <li><b><a href="#qwen">Qwen3-4B-Instruct-2507-GGUF</a></b></li>
-                <li><b><a href="#lfm">LFM2-2.6B-GGUF</a></b></li>
-                <li><b><a href="#ministral-8b">Ministral-8B-Instruct-2410-GGUF</a></b></li>
+            <ul class="model-overview-list" id="overview-list">
+                <!-- Data loaded from JSON -->
             </ul>
-            
-            <!-- Compatibility Note -->
-            <p>All models are compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
-            <p>🚀 <a href="https://colab.research.google.com/drive/1D4renZPZeqvDLcHl44fDCO4beWiJ3ata?usp=sharing" target="_blank"><strong>Run GGUF Inference in Google Colab without GPUs</strong></a></p>
-            <p>💻 <a href="https://github.com/SaiSivarajuIN/ai_think" target="_blank"><strong>Run Locally with AI Think Web App</strong></a></p>
-            <p>⚡ <a href="https://lightning.ai/" target="_blank"><strong>Run AI Think on Lightning.ai</strong></a></p>
 
             <!-- Models Container -->
             <div id="models-container"></div>
@@ -113,7 +104,7 @@
                         <tr><th>Model</th><th>Params</th><th>Format</th><th>Quant</th><th>Size (approx)</th></tr>
                     </thead>
                     <tbody>
-                        <!-- Data loaded from CSV -->
+                        <!-- Data loaded from model_comparison.json -->
                     </tbody>
                 </table>
             </div>
@@ -136,6 +127,13 @@
                     fine-tuning for local inference, and building multilingual text generation models.
                 </p>
                 <blockquote>“Efficiency meets accessibility — one model at a time.”</blockquote>
+                <blockquote>"Learn with AI, but don’t rely on it unnecessarily."</blockquote>
+                
+                <!-- Compatibility Note -->
+                <p>Compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
+                <p>🚀 <a href="https://colab.research.google.com/drive/1D4renZPZeqvDLcHl44fDCO4beWiJ3ata?usp=sharing" target="_blank">Run in Google Colab (No GPU)</a></p>
+                <p>💻 <a href="https://github.com/SaiSivarajuIN/ai_think" target="_blank">Run Locally with AI Think</a></p>
+                <p>⚡ <a href="https://lightning.ai/" target="_blank">Run on Lightning.ai</a></p>
             </div>
 
             <!-- Feedback Section -->
@@ -159,6 +157,7 @@
     <script src="../static/js/script.js"></script>
     <script src="../static/js/coming_soon.js"></script>
     <script src="../static/js/new.js"></script>
+    <script src="../static/js/overview.js"></script>
     <script src="../static/js/models.js"></script>
     <script src="../static/js/model_comparison.js"></script>
 </body>

@@ -142,5 +142,20 @@
             "Ministral-8B-Instruct-2410-Q4_0.gguf",
             "Ministral-8B-Instruct-2410-Q8_0.gguf"
         ]
+    },
+    {
+        "id": "ibm-granite",
+        "name": "IBM-granite-4.0-micro-GGUF",
+        "repo": "IBM-granite-4.0-micro-GGUF",
+        "details": {
+            "Model Size": "3B parameters",
+            "Architecture": "IBM Granite 4.0 Micro",
+            "Quantization": "Q4_0 (1.98 GB) / Q8_0 (3.62 GB)",
+            "License": "Apache 2.0"
+        },
+        "files": [
+            "IBM-granite-4.0-micro.Q4_0.gguf",
+            "IBM-granite-4.0-micro.Q8_0.gguf"
+        ]
     }
 ]
