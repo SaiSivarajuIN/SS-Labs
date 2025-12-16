@@ -23,11 +23,21 @@
         <ul>
             <li><a href="#overview">Overview</a></li>
             <li class="dropdown-container">
-                <a class="dropdown-toggle" href="#">Mistral AI</a>
+                <a class="dropdown-toggle" href="#">Falcon</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#mistral">Mistral-7b-v0.3-bnb-4bit-GGUF</a></li>
-                    <li><a href="#mistral-nemo">Mistral-Nemo-Instruct-2407-GGUF</a></li>
-                    <li><a href="#ministral-8b">Ministral-8B-Instruct-2410-GGUF</a></li>
+                    <li><a href="#falcon">Falcon-H1-0.5B-Instruct-GGUF</a></li>
+                </ul>
+            </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle" href="#">IBM</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#ibm-granite">IBM-granite-4.0-micro-GGUF</a></li>
+                </ul>
+            </li>
+            <li class="dropdown-container">
+                <a class="dropdown-toggle" href="#">Liquid AI</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#lfm">LFM2-2.6B-GGUF</a></li>
                 </ul>
             </li>
             <li class="dropdown-container">
@@ -45,9 +55,11 @@
                 </ul>
             </li>
             <li class="dropdown-container">
-                <a class="dropdown-toggle" href="#">Falcon</a>
+                <a class="dropdown-toggle" href="#">Mistral AI</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#falcon">Falcon-H1-0.5B-Instruct-GGUF</a></li>
+                    <li><a href="#mistral">Mistral-7b-v0.3-bnb-4bit-GGUF</a></li>
+                    <li><a href="#mistral-nemo">Mistral-Nemo-Instruct-2407-GGUF</a></li>
+                    <li><a href="#ministral-8b">Ministral-8B-Instruct-2410-GGUF</a></li>
                 </ul>
             </li>
             <li class="dropdown-container">
@@ -56,22 +68,10 @@
                     <li><a href="#qwen">Qwen3-4B-Instruct-2507-GGUF</a></li>
                 </ul>
             </li>
-            <li class="dropdown-container">
-                <a class="dropdown-toggle" href="#">Liquid AI</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#lfm">LFM2-2.6B-GGUF</a></li>
-                </ul>
-            </li>
-            <li class="dropdown-container">
-                <a class="dropdown-toggle" href="#">IBM</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#ibm-granite">IBM-granite-4.0-micro-GGUF</a></li>
-                </ul>
-            </li>
             <li><a href="#performance">Model Comparison</a></li>
             <li><a href="#finetuning">Fine-tuning</a></li>
             <li><a href="#about">About SS Labs</a></li>
-            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#feedback_contact">Feedback & Contact Us</a></li>
             <li><a href="#references">References</a></li>
         </ul>
     </nav>
@@ -89,13 +89,10 @@
             </div>
 
             <!-- Model Overview -->
-            <h2 id="overview">Overview</h2>
+            <h2 id="overview">Overview of Newly Added Models</h2>
             <ul class="model-overview-list" id="overview-list">
                 <!-- Data loaded from JSON -->
             </ul>
-
-            <!-- Compatibility Note -->
-            <p>Compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
 
             <!-- Models Container -->
             <div id="models-container"></div>
@@ -114,7 +111,8 @@
             </div>
 
             <!-- Fine-tuning Section -->
-            <h2 id="finetuning">Fine-tuning with Unsloth</h2>
+            <h2 id="finetuning">Fine-tuning</h2>
+            <p>Compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
             <p>
                 We specialize in creating efficient fine-tuning workflows using <strong>Unsloth</strong>, which enables rapid training on consumer-grade hardware like T4 GPUs. Our methods are optimized for memory efficiency without sacrificing performance, making it possible to fine-tune models on local machines or free cloud instances.
             </p>
@@ -124,23 +122,41 @@
             <p>➡️ <a href="https://colab.research.google.com/drive/12CX-1mVg21w89hgShlmE3kYZkdHP2Q1d?usp=sharing" target="_blank">View Fine-tuning Notebook on colab</a></p>
 
             <!-- About Section -->
-            <div class="spacer">
+            <div class="spacer" style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column;">
                 <h2 id="about">About SS Labs</h2>
 
-                <p><b>SS Labs</b> focuses on converting open LLMs to efficient GGUF formats, 
-                    fine-tuning for local inference, and building multilingual text generation models.
-                </p>
-                <blockquote>“Efficiency meets accessibility — one model at a time.”</blockquote>
-                
-                <!-- Compatibility Note -->
-                <p>💻 <a href="https://github.com/SaiSivarajuIN/ai_think" target="_blank">Deploy the <u>'AI Think'</u> web app locally</a> ⚡ <a href="https://lightning.ai/" target="_blank">on the <u>Lightning.ai</u> cloud, similar to ChatGPT.</a></p>
-                <p>🚀 or <a href="https://colab.research.google.com/drive/1D4renZPZeqvDLcHl44fDCO4beWiJ3ata?usp=sharing" target="_blank">Run in Google Colab</a></p>
+                <p><b>SS Labs</b> is a research and deployment group dedicated to making advanced language models accessible and efficient. We focus on converting open-source LLMs to optimized GGUF formats, enabling fine-tuning on consumer-grade hardware, and building multilingual text generation solutions.</p>
+
+                <h3>Our Mission</h3>
+                <blockquote>"Efficiency meets accessibility — one model at a time."</blockquote>
+
+                <h3>What We Do</h3>
+                <ul>
+                    <li>Convert open LLMs to efficient GGUF formats for edge and cloud inference</li>
+                    <li>Provide fine-tuning workflows optimized for local hardware (T4 GPUs, consumer devices)</li>
+                    <li>Build multilingual text generation models</li>
+                    <li>Enable deployment on various platforms and cloud providers</li>
+                </ul>
+
+                <h3>Get Started</h3>
+                <p>💻 <a href="https://github.com/SaiSivarajuIN/ai_think" target="_blank">Deploy the <u>'AI Think'</u> web app locally</a> or <a href="https://lightning.ai/" target="_blank">on <u>Lightning.ai</u> cloud, similar to ChatGPT</a></p>
+                <p>🚀 <a href="https://colab.research.google.com/drive/1D4renZPZeqvDLcHl44fDCO4beWiJ3ata?usp=sharing" target="_blank">Run in Google Colab</a></p>
             </div>
 
-            <!-- Feedback Section -->
-            <h2 id="feedback">Feedback</h2>
-            <p>We value your input! Please share your thoughts, suggestions, or report issues to help us improve.</p>
-            <p>📝 <a href="https://forms.gle/ugd9DxQsxEP2fVF26" target="_blank"><strong>Fill out the Feedback Form</strong></a></p>
+            <!-- Feedback & Contact Section -->
+            <div id="feedback_contact" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+                <div style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column;">
+                    <h2 id="feedback" style="margin-top: 0;">Feedback</h2>
+                    <p>We value your input! Please share your thoughts, suggestions, or report issues to help us improve.</p>
+                    <p style="margin-top: auto;">📝 <a href="https://forms.gle/ugd9DxQsxEP2fVF26" target="_blank"><strong>Fill out the Feedback Form</strong></a></p>
+                </div>
+
+                <div style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column;">
+                    <h2 id="contact" style="margin-top: 0;">Contact Us</h2>
+                    <p>Have questions? Reach out to us directly.</p>
+                    <p style="margin-top: auto;">📬 <a href="https://forms.gle/unKtNbh4CLsZXvtB7" target="_blank"><strong>Contact Form</strong></a></p>
+                </div>
+            </div>
 
             <!-- References Section -->
             <h2 id="references">References</h2>
@@ -161,6 +177,5 @@
     <script src="../static/js/overview.js"></script>
     <script src="../static/js/models.js"></script>
     <script src="../static/js/model_comparison.js"></script>
-    <script src="../static/js/main.js"></script>
 </body>
 </html>

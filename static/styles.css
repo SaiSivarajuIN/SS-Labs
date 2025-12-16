@@ -95,7 +95,6 @@ th {
     vertical-align: middle;
     margin-left: 10px;
     text-transform: uppercase;
-    animation: blink 1.5s infinite;
 }
 .page-header .logo {
     height: 40px;
@@ -201,7 +200,6 @@ a.disabled-coming-soon {
     height: 10px;
     border-radius: 50%;
     background-color: #d84315; /* darker orange */
-    box-shadow: 0 0 0 4px rgba(216,67,21,0.12); /* matching translucent halo */
     display: inline-block;
     margin-left: 10px;
 }
@@ -221,7 +219,6 @@ a.disabled-coming-soon {
     height: 10px;
     border-radius: 50%;
     background-color: #004085; /* darker blue */
-    box-shadow: 0 0 0 4px rgba(0,64,133,0.12); /* matching translucent halo */
     display: inline-block;
     margin-left: 10px;
 }
@@ -268,9 +265,4 @@ h2[id] {
 }
 .spacer {
     scroll-margin-top: 80px;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
 }
