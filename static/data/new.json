@@ -2,5 +2,6 @@
     "Qwen3-4B-Instruct-2507-GGUF",
     "LFM2-2.6B-GGUF",
     "Ministral-8B-Instruct-2410-GGUF",
-    "IBM-granite-4.0-micro-GGUF"
+    "IBM-granite-4.0-micro-GGUF",
+    "Google-gemma-3-1b-it-GGUF"
 ]

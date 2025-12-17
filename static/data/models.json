@@ -157,5 +157,21 @@
             "IBM-granite-4.0-micro.Q4_0.gguf",
             "IBM-granite-4.0-micro.Q8_0.gguf"
         ]
+    },
+    {
+        "id": "gemma-3",
+        "name": "Google-gemma-3-1b-it-GGUF",
+        "repo": "Google-gemma-3-1b-it-GGUF",
+        "details": {
+            "Model Size": "1B parameters",
+            "Architecture": "Gemma 3 1B IT",
+            "Quantization": "Q4_0 (720 MB) / Q8_0 (1.07 GB) / BF16 (2.01 GB)",
+            "License": "Gemma Terms of Use"
+        },
+        "files": [
+            "Google-gemma-3-1b-it.Q4_0.gguf",
+            "Google-gemma-3-1b-it.Q8_0.gguf",
+            "Google-gemma-3-1b-it.BF16.gguf"
+        ]
     }
 ]

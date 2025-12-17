@@ -75,5 +75,12 @@
         "format": "GGUF",
         "quant": "Q4_0 / Q8_0",
         "size": "1.98 GB / 3.62 GB"
+    },
+    {
+        "model": "Google-gemma-3-1b-it",
+        "params": "1B",
+        "format": "GGUF",
+        "quant": "Q4_0 / Q8_0 / BF16",
+        "size": "720 MB / 1.07 GB / 2.01 GB"
     }
 ]
