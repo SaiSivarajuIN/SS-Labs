@@ -93,7 +93,7 @@
         "details": {
             "Model Size": "0.5B parameters",
             "Architecture": "Falcon H1",
-            "Quantization": "Q8_0 (~0.5 GB)",
+            "Quantization": "Q8_0 (556 MB)",
             "License": "MIT"
         },
         "files": [
