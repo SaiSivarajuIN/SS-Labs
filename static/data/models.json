@@ -107,10 +107,11 @@
         "details": {
             "Model Size": "4B parameters",
             "Architecture": "Qwen 3",
-            "Quantization": "Q4_0 (2.37 GB) / Q8_0 (4.28 GB)",
+            "Quantization": "Q2_K (1.67 GB) / Q4_0 (2.37 GB) / Q8_0 (4.28 GB)",
             "License": "MIT"
         },
         "files": [
+            "Qwen3-4B-Instruct-2507-Q2_K.gguf",
             "Qwen3-4B-Instruct-2507-Q4_0.gguf",
             "Qwen3-4B-Instruct-2507-Q8_0.gguf"
         ]

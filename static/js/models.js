@@ -74,7 +74,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Pre block
                 const pre = document.createElement('pre');
-                pre.textContent = model.files.join('\n');
+                model.files.forEach((filename, index) => {
+                    const a = document.createElement('a');
+                    a.href = `${fullRepoUrl}?show_file_info=${filename}`;
+                    a.target = '_blank';
+                    a.textContent = filename;
+                    pre.appendChild(a);
+
+                    if (index < model.files.length - 1) {
+                        pre.appendChild(document.createTextNode('\n'));
+                    }
+                });
                 section.appendChild(pre);
 
                 container.appendChild(section);

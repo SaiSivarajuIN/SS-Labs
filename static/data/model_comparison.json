@@ -59,8 +59,8 @@
         "model": "Qwen3-4B",
         "params": "4B",
         "format": "GGUF",
-        "quant": "Q4_0 / Q8_0",
-        "size": "2.37 GB / 4.28 GB"
+        "quant": "Q2_K / Q4_0 / Q8_0",
+        "size": "1.67 GB / 2.37 GB / 4.28 GB"
     },
     {
         "model": "LFM2-2.6B",
