@@ -25,7 +25,7 @@
             "License": "MIT"
         },
         "files": [
-            "Mistral-Nemo-Instruct-2407.TQ1_0.gguf"
+            "Mistral-Nemo-Instruct-2407-bnb-tq1_0.gguf"
         ]
     },
     {
@@ -53,9 +53,9 @@
             "License": "MIT"
         },
         "files": [
-            "Llama-3.2-1B-Instruct.Q2_K.gguf",
-            "Llama-3.2-1B-Instruct.Q8_0.gguf",
-            "Llama-3.2-1B-Instruct.BF16.gguf"
+            "Llama-3.2-1B-Instruct-Q2_K.gguf",
+            "Llama-3.2-1B-Instruct-Q8_0.gguf",
+            "Llama-3.2-1B-Instruct-BF16.gguf"
         ]
     },
     {
@@ -69,7 +69,7 @@
             "License": "MIT"
         },
         "files": [
-            "phi-3.5-mini-instruct.Q4_K_M.gguf"
+            "phi-3.5-mini-instruct-Q4_K_M.gguf"
         ]
     },
     {
@@ -156,8 +156,8 @@
             "License": "Apache 2.0"
         },
         "files": [
-            "IBM-granite-4.0-micro.Q4_0.gguf",
-            "IBM-granite-4.0-micro.Q8_0.gguf"
+            "IBM-granite-4.0-micro-Q4_0.gguf",
+            "IBM-granite-4.0-micro-Q8_0.gguf"
         ]
     },
     {
@@ -171,9 +171,9 @@
             "License": "Gemma Terms of Use"
         },
         "files": [
-            "Google-gemma-3-1b-it.Q4_0.gguf",
-            "Google-gemma-3-1b-it.Q8_0.gguf",
-            "Google-gemma-3-1b-it.BF16.gguf"
+            "Google-gemma-3-1b-it-Q4_0.gguf",
+            "Google-gemma-3-1b-it-Q8_0.gguf",
+            "Google-gemma-3-1b-it-BF16.gguf"
         ]
     }
 ]
