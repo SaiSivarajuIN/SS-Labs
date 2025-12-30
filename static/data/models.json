@@ -131,6 +131,22 @@
         ]
     },
     {
+        "id": "lfm-exp",
+        "name": "LFM2-2.6B-Exp-GGUF",
+        "repo": "LFM2-2.6B-Exp-GGUF",
+        "details": {
+            "Model Size": "2.6B parameters",
+            "Architecture": "LFM 2 Exp",
+            "Quantization": "Q2_K (1.56 GB) / Q8_0 (2.73 GB) / BF16 (5.14 GB)",
+            "License": "MIT"
+        },
+        "files": [
+            "LiquidAI-LFM2-2.6B-Exp-Q2_K.gguf",
+            "LiquidAI-LFM2-2.6B-Exp-Q8_0.gguf",
+            "LiquidAI-LFM2-2.6B-Exp-BF16.gguf"
+        ]
+    },
+    {
         "id": "ministral-8b",
         "name": "Ministral-8B-Instruct-2410-GGUF",
         "repo": "Ministral-8B-Instruct-2410-GGUF",

@@ -44,6 +44,7 @@
                 <a class="dropdown-toggle" href="#">Liquid AI</a>
                 <ul class="dropdown-menu">
                     <li><a href="#lfm">LFM2-2.6B-GGUF</a></li>
+                    <li><a href="#lfm-exp">LFM2-2.6B-Exp-GGUF</a></li>
                 </ul>
             </li>
             <li class="dropdown-container">
@@ -75,7 +76,7 @@
                 </ul>
             </li>
             <li><a href="#performance">Model Comparison</a></li>
-            <li><a href="#finetuning">Fine-tuning</a></li>
+            <li><a href="#finetuning">Fine-tuning & Quantizing</a></li>
             <li><a href="#about">About SS Labs</a></li>
             <li><a href="#feedback_contact">Feedback & Contact Us</a></li>
             <li><a href="#references">References</a></li>
@@ -116,16 +117,25 @@
                 </table>
             </div>
 
-            <!-- Fine-tuning Section -->
-            <h2 id="finetuning">Fine-tuning</h2>
-            <p>Compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
-            <p>
-                We specialize in creating efficient fine-tuning workflows using <strong>Unsloth</strong>, which enables rapid training on consumer-grade hardware like T4 GPUs. Our methods are optimized for memory efficiency without sacrificing performance, making it possible to fine-tune models on local machines or free cloud instances.
-            </p>
-            <p>
-                Our primary fine-tuning guide is available as a Jupyter notebook. It covers the end-to-end process for adapting models to your specific needs. Explore our step-by-step guide to start fine-tuning your own models.
-            </p>
-            <p>➡️ <a href="https://colab.research.google.com/drive/12CX-1mVg21w89hgShlmE3kYZkdHP2Q1d?usp=sharing" target="_blank">View Fine-tuning Notebook on colab</a></p>
+            <!-- Fine-tuning & Model Quantizing Section -->
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+                <div style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column;">
+                    <h2 id="finetuning" style="margin-top: 0;">Fine-tuning</h2>
+                    <p>Compatible with <b>llama.cpp</b>, <b>Unsloth</b>, and <b>T4 GPUs</b>.</p>
+                    <p>
+                        We specialize in creating efficient fine-tuning workflows using <strong>Unsloth</strong>, enabling rapid training on consumer-grade hardware like T4 GPUs.
+                    </p>
+                </div>
+
+                <div style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column;">
+                    <h2 id="quantizing" style="margin-top: 0;">Model Quantizing</h2>
+                    <p>Compatible with <b>llama.cpp</b>.</p>
+                    <p>
+                        We convert open-source LLMs to optimized GGUF formats for efficient edge and cloud inference. Quantization reduces memory usage and improves inference speed on CPU and Apple Silicon.
+                    </p>
+                </div>
+                <p style="margin-top: auto;">➡️ <a href="https://colab.research.google.com/drive/12CX-1mVg21w89hgShlmE3kYZkdHP2Q1d?usp=sharing" target="_blank">View Notebook on colab</a></p>
+            </div>
 
             <!-- About Section -->
             <div class="spacer" style="flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex; flex-direction: column;">
@@ -172,7 +182,8 @@
             
             <!-- Footer -->
             <footer>
-                <p>© 2024 SS Labs. All rights reserved.</p>
+                <p>© 2025 SS Labs. All rights reserved.</p>
+                <p>Last updated: 30-Dec-2025</p>
             </footer>
         </div>
     </main>

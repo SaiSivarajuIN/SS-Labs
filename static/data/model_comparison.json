@@ -70,6 +70,13 @@
         "size": "1.48 GB"
     },
     {
+        "model": "LFM2-2.6B-Exp",
+        "params": "2.6B",
+        "format": "GGUF",
+        "quant": "Q2_K / Q8_0 / BF16",
+        "size": "1.56 GB / 2.73 GB / 5.14 GB"
+    },
+    {
         "model": "IBM-granite-4.0-micro",
         "params": "3B",
         "format": "GGUF",
