@@ -117,6 +117,22 @@
         ]
     },
     {
+        "id": "qwen-thinking",
+        "name": "Qwen3-4B-Thinking-2507-GGUF",
+        "repo": "Qwen3-4B-Thinking-2507-GGUF",
+        "details": {
+            "Model Size": "4B parameters",
+            "Architecture": "Qwen 3 Thinking",
+            "Quantization": "Q2_K (1.67 GB) / Q4_K_M (2.5 GB) / Q8_0 (4.28 GB)",
+            "License": "MIT"
+        },
+        "files": [
+            "Qwen3-4B-Thinking-2507-Q2_K.gguf",
+            "Qwen3-4B-Thinking-2507-Q4_K_M.gguf",
+            "Qwen3-4B-Thinking-2507-Q8_0.gguf"
+        ]
+    },
+    {
         "id": "lfm",
         "name": "LFM2-2.6B-GGUF",
         "repo": "LFM2-2.6B-GGUF",
