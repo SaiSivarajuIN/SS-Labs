@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
             this.parentElement.classList.toggle('open');
             this.nextElementSibling.style.display = this.parentElement.classList.contains('open') ? 'block' : 'none';
         });
