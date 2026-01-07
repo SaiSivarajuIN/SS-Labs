@@ -51,3 +51,55 @@ document.addEventListener('DOMContentLoaded', function () {
         document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     };
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const desktopToggle = document.getElementById('desktop-toggle');
+    const body = document.body;
+    
+    if (desktopToggle) {
+        desktopToggle.addEventListener('click', function() {
+            body.classList.toggle('collapsed');
+        });
+    }
+});
+
+// --- Added: stable hash scrolling to avoid jumping to bottom on refresh ---
+(function() {
+    // prevent browser automatic scroll restore (helps with refresh/back)
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    function findAndScrollToHash(maxRetries = 20, interval = 100) {
+        const hash = (location.hash || '').replace(/^#/, '');
+        if (!hash) return;
+        let attempts = 0;
+
+        const timer = setInterval(() => {
+            attempts++;
+            const el = document.getElementById(hash) || document.querySelector(`[name="${hash}"]`);
+            if (el) {
+                clearInterval(timer);
+                // Use instant scroll then smooth to ensure stable positioning
+                el.scrollIntoView({ block: 'start', behavior: 'auto' });
+                // optional small smooth nudge
+                try { window.scrollBy({ top: -8, behavior: 'smooth' }); } catch(e){}
+            } else if (attempts >= maxRetries) {
+                clearInterval(timer);
+            }
+        }, interval);
+    }
+
+    // On initial load: force top, then attempt to scroll to hash after content/scripts run
+    window.addEventListener('load', function() {
+        // ensure start at top to avoid leftover positions
+        window.scrollTo(0, 0);
+        // give other scripts time to render injected sections, then try to scroll
+        setTimeout(() => findAndScrollToHash(30, 100), 80);
+    });
+
+    // Also handle hash changes while on the page
+    window.addEventListener('hashchange', function() {
+        setTimeout(() => findAndScrollToHash(30, 100), 20);
+    });
+})();

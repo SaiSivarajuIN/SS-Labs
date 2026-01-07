@@ -266,3 +266,23 @@ h2[id] {
 .spacer {
     scroll-margin-top: 80px;
 }
+
+
+/* Desktop toggle button styles */
+#desktop-toggle {
+    display: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+@media (min-width: 768px) {
+    #desktop-toggle {
+        display: block;
+    }
+    body.collapsed #roadmap {
+        display: none;
+    }
+    body.collapsed .main-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
