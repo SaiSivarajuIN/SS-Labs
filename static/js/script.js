@@ -103,3 +103,86 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => findAndScrollToHash(30, 100), 20);
     });
 })();
+
+// Enhanced cleanup on page close: clear cookies, local/session storage, Cache Storage, and IndexedDB.
+(function() {
+	// Helper: clear all cookies (tries both plain and domain-scoped)
+	function clearCookies() {
+		const cookies = document.cookie.split(';');
+		for (let i = 0; i < cookies.length; i++) {
+			let cookie = cookies[i];
+			while (cookie.charAt(0) === ' ') cookie = cookie.substring(1);
+			const eqPos = cookie.indexOf('=');
+			const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+			// expire for path and attempt domain-scoped expiry
+			try {
+				document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+				document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=' + location.hostname;
+			} catch (e) {
+				// ignore
+			}
+		}
+	}
+
+	// Helper: clear localStorage and sessionStorage
+	function clearStorages() {
+		try { localStorage.clear(); } catch (e) {}
+		try { sessionStorage.clear(); } catch (e) {}
+	}
+
+	// Helper: clear Cache Storage (Cache API)
+	function clearCacheStorage() {
+		if (!('caches' in window)) return;
+		try {
+			caches.keys().then(keys => {
+				return Promise.all(keys.map(k => caches.delete(k)));
+			}).catch(() => {});
+		} catch (e) {
+			// ignore
+		}
+	}
+
+	// Helper: attempt to enumerate and delete IndexedDB databases (best-effort)
+	function clearIndexedDB() {
+		if (!('indexedDB' in window)) return;
+		// modern browsers: indexedDB.databases()
+		if (indexedDB.databases) {
+			try {
+				indexedDB.databases().then(dbs => {
+					if (!Array.isArray(dbs)) return;
+					dbs.forEach(db => {
+						try { if (db && db.name) indexedDB.deleteDatabase(db.name); } catch (e) {}
+					});
+				}).catch(() => {});
+			} catch (e) {
+				// ignore
+			}
+		} else {
+			// Fallback: no reliable enumeration available; nothing to do
+		}
+	}
+
+	// Run all cleanup operations (best-effort; async ops may not finish on unload)
+	function runCleanup() {
+		clearCookies();
+		clearStorages();
+		clearCacheStorage();
+		clearIndexedDB();
+	}
+
+	// Use pagehide (more reliable on some platforms) and beforeunload as a fallback
+	window.addEventListener('pagehide', function() {
+		runCleanup();
+	});
+
+	window.addEventListener('beforeunload', function() {
+		runCleanup();
+	});
+
+	// Optional: also try when the document becomes hidden
+	document.addEventListener('visibilitychange', function() {
+		if (document.visibilityState === 'hidden') {
+			runCleanup();
+		}
+	});
+})();
