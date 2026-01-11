@@ -7,7 +7,7 @@
             "Model Size": "7B parameters",
             "Architecture": "Mistral 7B v0.3",
             "Quantization": "Q3_K_M (3.52 GB) / Q4_K_M (4.37 GB)",
-            "License": "MIT"
+            "License": "apache-2.0"
         },
         "files": [
             "mistral-7b-v0.3.Q3_K_M.gguf",
@@ -22,7 +22,7 @@
             "Model Size": "12B parameters",
             "Architecture": "Mistral Nemo Instruct 2407",
             "Quantization": "TQ1_0 (4.99 GB)",
-            "License": "MIT"
+            "License": "apache-2.0"
         },
         "files": [
             "Mistral-Nemo-Instruct-2407-bnb-tq1_0.gguf"
@@ -36,7 +36,7 @@
             "Model Size": "8B parameters",
             "Architecture": "Llama 3",
             "Quantization": "Q4_K_M (~5.0 GB)",
-            "License": "MIT"
+            "License": "llama3"
         },
         "files": [
             "llama-3-8b.Q4_K_M.gguf"
@@ -50,7 +50,7 @@
             "Model Size": "1B parameters",
             "Architecture": "Llama 3.2",
             "Quantization": "Q2_K (581 MB) / Q8_0 (1.32 GB) / BF16 (2.48 GB)",
-            "License": "MIT"
+            "License": "llama3"
         },
         "files": [
             "Llama-3.2-1B-Instruct-Q2_K.gguf",
@@ -94,7 +94,7 @@
             "Model Size": "0.5B parameters",
             "Architecture": "Falcon H1",
             "Quantization": "Q8_0 (556 MB)",
-            "License": "MIT"
+            "License": "falcon-llm-license"
         },
         "files": [
             "Falcon-H1-0.5B-Instruct-Q8_0.gguf"
@@ -108,7 +108,7 @@
             "Model Size": "4B parameters",
             "Architecture": "Qwen 3",
             "Quantization": "Q2_K (1.67 GB) / Q4_0 (2.37 GB) / Q8_0 (4.28 GB)",
-            "License": "MIT"
+            "License": "apache-2.0"
         },
         "files": [
             "Qwen3-4B-Instruct-2507-Q2_K.gguf",
@@ -124,7 +124,7 @@
             "Model Size": "4B parameters",
             "Architecture": "Qwen 3 Thinking",
             "Quantization": "Q2_K (1.67 GB) / Q4_K_M (2.5 GB) / Q8_0 (4.28 GB)",
-            "License": "MIT"
+            "License": "apache-2.0"
         },
         "files": [
             "Qwen3-4B-Thinking-2507-Q2_K.gguf",
@@ -140,7 +140,7 @@
             "Model Size": "2.6B parameters",
             "Architecture": "LFM 2",
             "Quantization": "Q4_0 (1.48 GB)",
-            "License": "MIT"
+            "License": "lfm1.0"
         },
         "files": [
             "LFM2-2.6B-Q4_0.gguf"
@@ -154,7 +154,7 @@
             "Model Size": "2.6B parameters",
             "Architecture": "LFM 2 Exp",
             "Quantization": "Q2_K (1.56 GB) / Q8_0 (2.73 GB) / BF16 (5.14 GB)",
-            "License": "MIT"
+            "License": "lfm1.0"
         },
         "files": [
             "LiquidAI-LFM2-2.6B-Exp-Q2_K.gguf",
@@ -170,7 +170,7 @@
             "Model Size": "8B parameters",
             "Architecture": "Ministral 8B Instruct 2410",
             "Quantization": "Q4_0 (4.66 GB) / Q8_0 (8.53 GB)",
-            "License": "MIT"
+            "License": "apache-2.0"
         },
         "files": [
             "Ministral-8B-Instruct-2410-Q4_0.gguf",
@@ -185,7 +185,7 @@
             "Model Size": "3B parameters",
             "Architecture": "IBM Granite 4.0 Micro",
             "Quantization": "Q4_0 (1.98 GB) / Q8_0 (3.62 GB)",
-            "License": "Apache 2.0"
+            "License": "apache 2.0"
         },
         "files": [
             "IBM-granite-4.0-micro-Q4_0.gguf",
