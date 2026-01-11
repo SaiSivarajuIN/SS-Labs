@@ -30,6 +30,20 @@
         ]
     },
     {
+        "id": "gemma-3-270m",
+        "name": "Google-gemma-3-270m-it-GGUF",
+        "repo": "gemma-3-270m-it-GGUF",
+        "details": {
+            "Model Size": "270M parameters",
+            "Architecture": "Gemma 3 270M IT",
+            "Quantization": "BF16 (543 MB)",
+            "License": "Gemma Terms of Use"
+        },
+        "files": [
+            "gemma-3-270m-it-BF16.gguf"
+        ]
+    },
+    {
         "id": "ibm-granite",
         "name": "IBM-granite-4.0-micro-GGUF",
         "repo": "IBM-granite-4.0-micro-GGUF",

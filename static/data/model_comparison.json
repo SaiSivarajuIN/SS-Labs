@@ -1,54 +1,5 @@
 [
     {
-        "model": "Mistral-7b-v0.3",
-        "params": "7B",
-        "format": "GGUF",
-        "quant": "Q3_K_M / Q4_K_M",
-        "size": "3.52 GB / 4.37 GB"
-    },
-    {
-        "model": "Mistral-Nemo-Instruct",
-        "params": "12B",
-        "format": "GGUF",
-        "quant": "TQ1_0",
-        "size": "4.99 GB"
-    },
-    {
-        "model": "Ministral-8B-Instruct-2410",
-        "params": "8B",
-        "format": "GGUF",
-        "quant": "Q4_0 / Q8_0",
-        "size": "4.66 GB / 8.53 GB"
-    },
-    {
-        "model": "Phi-3.5-mini",
-        "params": "3.8B",
-        "format": "GGUF",
-        "quant": "Q4_K_M",
-        "size": "2.2 GB"
-    },
-    {
-        "model": "Phi-3-mini-4k",
-        "params": "3.8B",
-        "format": "GGUF",
-        "quant": "Q4_K_M",
-        "size": "2.2 GB"
-    },
-    {
-        "model": "Llama-3-8b",
-        "params": "8B",
-        "format": "GGUF",
-        "quant": "Q4_K_M",
-        "size": "~5.0 GB"
-    },
-    {
-        "model": "Llama-3.2-1B",
-        "params": "1B",
-        "format": "GGUF",
-        "quant": "Q2_K / Q8_0 / BF16",
-        "size": "581 MB / 1.32 GB / 2.48 GB"
-    },
-    {
         "model": "Falcon-H1",
         "params": "0.5B",
         "format": "GGUF",
@@ -56,18 +7,25 @@
         "size": "556 MB"
     },
     {
-        "model": "Qwen3-4B",
-        "params": "4B",
+        "model": "Google-gemma-3-1b-it",
+        "params": "1B",
         "format": "GGUF",
-        "quant": "Q2_K / Q4_0 / Q8_0",
-        "size": "1.67 GB / 2.37 GB / 4.28 GB"
+        "quant": "Q4_0 / Q8_0 / BF16",
+        "size": "720 MB / 1.07 GB / 2.01 GB"
     },
     {
-        "model": "Qwen3-4B-Thinking",
-        "params": "4B",
+        "model": "Google-gemma-3-270m-it",
+        "params": "270M",
         "format": "GGUF",
-        "quant": "Q2_K / Q4_K_M / Q8_0",
-        "size": "1.67 GB / 2.5 GB / 4.28 GB"
+        "quant": "BF16",
+        "size": "543 MB"
+    },
+    {
+        "model": "IBM-granite-4.0-micro",
+        "params": "3B",
+        "format": "GGUF",
+        "quant": "Q4_0 / Q8_0",
+        "size": "1.98 GB / 3.62 GB"
     },
     {
         "model": "LFM2-2.6B",
@@ -84,17 +42,66 @@
         "size": "1.56 GB / 2.73 GB / 5.14 GB"
     },
     {
-        "model": "IBM-granite-4.0-micro",
-        "params": "3B",
+        "model": "Llama-3-8b",
+        "params": "8B",
         "format": "GGUF",
-        "quant": "Q4_0 / Q8_0",
-        "size": "1.98 GB / 3.62 GB"
+        "quant": "Q4_K_M",
+        "size": "~5.0 GB"
     },
     {
-        "model": "Google-gemma-3-1b-it",
+        "model": "Llama-3.2-1B",
         "params": "1B",
         "format": "GGUF",
-        "quant": "Q4_0 / Q8_0 / BF16",
-        "size": "720 MB / 1.07 GB / 2.01 GB"
+        "quant": "Q2_K / Q8_0 / BF16",
+        "size": "581 MB / 1.32 GB / 2.48 GB"
+    },
+    {
+        "model": "Ministral-8B-Instruct-2410",
+        "params": "8B",
+        "format": "GGUF",
+        "quant": "Q4_0 / Q8_0",
+        "size": "4.66 GB / 8.53 GB"
+    },
+    {
+        "model": "Mistral-7b-v0.3",
+        "params": "7B",
+        "format": "GGUF",
+        "quant": "Q3_K_M / Q4_K_M",
+        "size": "3.52 GB / 4.37 GB"
+    },
+    {
+        "model": "Mistral-Nemo-Instruct",
+        "params": "12B",
+        "format": "GGUF",
+        "quant": "TQ1_0",
+        "size": "4.99 GB"
+    },
+    {
+        "model": "Phi-3-mini-4k",
+        "params": "3.8B",
+        "format": "GGUF",
+        "quant": "Q4_K_M",
+        "size": "2.2 GB"
+    },
+    {
+        "model": "Phi-3.5-mini",
+        "params": "3.8B",
+        "format": "GGUF",
+        "quant": "Q4_K_M",
+        "size": "2.2 GB"
+    },
+    {
+        "model": "Qwen3-4B",
+        "params": "4B",
+        "format": "GGUF",
+        "quant": "Q2_K / Q4_0 / Q8_0",
+        "size": "1.67 GB / 2.37 GB / 4.28 GB"
+    },
+    {
+        "model": "Qwen3-4B-Thinking",
+        "params": "4B",
+        "format": "GGUF",
+        "quant": "Q2_K / Q4_K_M / Q8_0",
+        "size": "1.67 GB / 2.5 GB / 4.28 GB"
     }
 ]
